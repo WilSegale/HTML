@@ -1,0 +1,9 @@
+/*resizes the robot img */
+img{
+    width:50px;
+}
+  
+  /*if the user hovers over the Privacy link it makes it bigger. So if the user has bad eyes they can read it better*/
+#Privacy:hover{
+    font-size:20px;
+}
