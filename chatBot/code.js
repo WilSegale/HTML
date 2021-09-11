@@ -16,8 +16,7 @@ const problems = [
 	"These times are hard but they will pass.",
 	"Not all storms come to disrupt your life. Some come to clear your path.",
 	"No darkness lasts forever. And even there, there are stars. -Ursula K. LeGuin",
-	"Never be ashamed of a scar." + " " +
-	"It simply means you were stronger than whatever tried to hurt you.",
+	"Never be ashamed of a scar. It simply means you were stronger than whatever tried to hurt you.",
 	"Make peace with your past so it won't destroy your present. -Paulo Coelho",
 	"Love your future more than your past. -Joe Dispenza",
 	"You might have bad days but those bad days will make you stronger.",

@@ -1,0 +1,28 @@
+html{
+	scroll-behavior: smooth;
+	width:auto;
+}
+
+body{
+	text-transform: uppercase;
+}
+
+h1{
+	font-weight: bold;
+}
+
+span{
+	text-decoration: underline;
+}
+
+.groceries {	 
+	list-style: none;
+}
+
+.li{
+    display:none;  
+}
+
+#li2{
+	text-align: left;
+}
