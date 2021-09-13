@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <link rel="shortcut icon" href="https://trinket-user-assets.trinket.io/9479bfa0fee644f1656b10cf524e803a21481338-5fae9e1d238a616447cb6047.gif"/>
+      <link rel="shortcut icon" href="tenor.gif"/>
       <title>Chat Bot</title>
       <script src="code.js"></script>
       <link rel="stylesheet" href="style.css">
    </head>
    <body onload="info()">
       <!--<p>(Beta)</p>-->
-      <center>
+      <div id="body">
          <div id="info"></div>
-         <img src="https://trinket-user-assets.trinket.io/9479bfa0fee644f1656b10cf524e803a21481338-5fae9e1d238a616447cb6047.gif" id="img">
+         <img src="tenor.gif" id="img">
          <input type="text" autocomplete="off" id="input" onkeydown="Enter(event)" placeholder="What are you struggling with">
          <button onclick="output()">output</button>
          <p id="output"></p>
-      </center>
-      <a href="#" target="_self" onclick="Privacy()">Privacy</a>
+      </div>
+      <a href="#" target="_self" onclick="Privacy()" class="Privacy">Privacy</a>
    </body>
 </html>

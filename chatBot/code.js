@@ -53,8 +53,8 @@ const HelpLinks = [
 function info() {
 	var info = document.getElementById("info");
 	info.innerHTML = "Hello, my name is Chatty The ChatBot." +
-		" I'm here to help you with your problems." +
-		" What are you struggling with?";
+					 "I'm here to help you with your problems." +
+					 "What are you struggling with?";
 	setTimeout(function () {
 		info.innerHTML = "";
 	}, 100000);
@@ -67,11 +67,14 @@ function Enter(event) {
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
-	if (input.includes("hurt someone") || input.includes("cutting") || input.includes("die") || input.includes("alive") && EnterKey == 13) {
+	if (input.includes("hurt someone") && EnterKey == 13 || 
+		input.includes("cutting") && EnterKey == 13 || 
+		input.includes("die") && EnterKey == 13 || 
+		input.includes("alive") && EnterKey == 13) {
 		NeedHelp(); //this function will send the user to a differnet function that will say "I am not trained in this but let me find you some one who is please hold"
 	} else {
 		for (var i = 0; i < problems.length; i++) {
-			if (EnterKey == 13) {
+			if (input && EnterKey == 13) {
 				userInput.value = "";
 				output.innerHTML = problems[outputProblems];
 				return false
@@ -86,7 +89,10 @@ function output() {
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
-	if (input.includes("hurt someone") || input.includes("cutting") || input.includes("die") || input.includes("alive")) {
+	if (input.includes("hurt someone") || 
+		input.includes("cutting") || 
+		input.includes("die") || 
+		input.includes("alive")) {
 		NeedHelp(); //this function will send the user to a differnet function that will say "I am not trained in this but let me find you some one who is please hold"
 	} else {
 		for (var i = 0; i < problems.length; i++) {
@@ -98,16 +104,21 @@ function output() {
 	}
 }
 
+
 //outputs the name of the program that will help the user
 function NeedHelp() {
-	var input = document.getElementById("input").value;
 	var output = document.getElementById("output");
 	var HelpUser = Math.floor((Math.random() * Help.length));
 	output.innerHTML = 'Please wait im trying to find a site that will best help you.';
+	output.style.cursor="progress"
+
 	setTimeout(function () {
+		output.style.cursor="auto"
 		for (var i = 0; i < Help.length; i++) {
 			if (output) {
-				output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " + Help[HelpUser];
+				output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " +
+				Help[HelpUser] + "This website might help you. " +
+				HelpLinks[links];
 			}
 		}
 	}, 3000);
@@ -115,14 +126,18 @@ function NeedHelp() {
 
 //tell the users that they will find a program that might help you with your thoughts
 function NeedHelp() { 
-	var input = document.getElementById("input").value;
 	var output = document.getElementById("output");
 	var HelpUser = Math.floor((Math.random() * Help.length));
 	var links = Math.floor((Math.random() * HelpLinks.length));
 	output.innerHTML = 'Please wait im trying to find a site that will best Help you.';
+	output.style.cursor="progress"
+
 	setTimeout(function () {
+		output.style.cursor="auto"
 		for (var i = 0; i < Help.length; i++) {
-		  output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " + Help[HelpUser] + "This website might help you. " + HelpLinks[links];
+			output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " +
+			Help[HelpUser] + "This website might help you. " +
+			HelpLinks[links];
 		}
 	}, 3000);
 }
@@ -130,7 +145,8 @@ function NeedHelp() {
 //tell the users that nothing is shared and nothing is saved on the site
 function Privacy() {
 	var output = document.getElementById("output");
-	output.innerHTML = 'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>'+
+	output.innerHTML = 
+	'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>'+
 	'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>'+
 	'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, ' +
 	'it will send you to someone who is trained to deal with what you are feeling.';
