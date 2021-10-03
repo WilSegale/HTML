@@ -10,7 +10,7 @@ const problems = [
 	"Every day is a second chance.",
 	"You may have to fight a battle more than once to win it. -Margaret Thatcher",
 	"You think you deserve the pain that you have but you don't." + "" +
-	" What you deserve is love and someone to care for you",
+	"What you deserve is love and someone to care for you",
 	"To heal a wound you must stop scratching it. -Paulo Coelho",
 	"Things sometimes get worse before they get better.",
 	"These times are hard but they will pass.",
