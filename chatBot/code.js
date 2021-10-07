@@ -1,5 +1,5 @@
 //list of quotes for the users to read
-const problems = [
+var problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
 	"You're allowed to scream, You're allowed to cry, but not to give up.",
@@ -28,7 +28,7 @@ const problems = [
 ];
 
 //the name of the program that will help the user
-const Help = [
+var Help = [
 	"American Foundation for Suicide Prevention (AFSP)",
 	"National Institute of Mental Health (NIMH)", "Society for the Prevention of Teen Suicide (SPTS)",
 	"Centers for Disease Control and Prevention (CDC)", "Action Alliance for Suicide Prevention",
@@ -36,7 +36,7 @@ const Help = [
 ];
 
 //This will give the users a link to click if they want to get help
-const HelpLinks = [
+var HelpLinks = [
 	'<a href="https://afsp.org/find-support/resources/">find-support resources</a>',
 	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">suicide-prevention</a>',
 	'<a href="https://www.sptsusa.org/">sptsusa.org</a>',
@@ -145,15 +145,14 @@ function NeedHelp() {
 //tell the users that nothing is shared and nothing is saved on the site
 function Privacy() {
 	var output = document.getElementById("output");
-	output.innerHTML = 
-	'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>'+
-	'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>'+
-	'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, ' +
-	'it will send you to someone who is trained to deal with what you are feeling.';
+	output.innerHTML = 'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>'+
+					   'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>'+
+					   'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, ' +
+					   'it will send you to someone who is trained to deal with what you are feeling.';
 	if (output.style.display === "block") {
 		output.style.display = "none";
 	} 
     else {
 		output.style.display = "block";
 	}
-}
+};
