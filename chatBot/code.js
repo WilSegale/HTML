@@ -1,5 +1,5 @@
 //list of quotes for the users to read
-var problems = [
+const problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
 	"You're allowed to scream, You're allowed to cry, but not to give up.",
@@ -28,7 +28,7 @@ var problems = [
 ];
 
 //the name of the program that will help the user
-var Help = [
+const Help = [
 	"American Foundation for Suicide Prevention (AFSP)",
 	"National Institute of Mental Health (NIMH)", "Society for the Prevention of Teen Suicide (SPTS)",
 	"Centers for Disease Control and Prevention (CDC)", "Action Alliance for Suicide Prevention",
@@ -36,7 +36,7 @@ var Help = [
 ];
 
 //This will give the users a link to click if they want to get help
-var HelpLinks = [
+const HelpLinks = [
 	'<a href="https://afsp.org/find-support/resources/">find-support resources</a>',
 	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">suicide-prevention</a>',
 	'<a href="https://www.sptsusa.org/">sptsusa.org</a>',
@@ -130,7 +130,7 @@ function NeedHelp() {
 	var HelpUser = Math.floor((Math.random() * Help.length));
 	var links = Math.floor((Math.random() * HelpLinks.length));
 	output.innerHTML = 'Please wait im trying to find a site that will best Help you.';
-	output.style.cursor="progress"
+	output.style.cursor = "progress"
 
 	setTimeout(function () {
 		output.style.cursor="auto"
@@ -151,7 +151,7 @@ function Privacy() {
 					   'it will send you to someone who is trained to deal with what you are feeling.';
 	if (output.style.display === "block") {
 		output.style.display = "none";
-	} 
+	}
     else {
 		output.style.display = "block";
 	}
