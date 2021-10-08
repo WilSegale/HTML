@@ -86,11 +86,9 @@ function code() {
 	document.getElementById("code").style.cursor = 'progress';
 	var password = "18643728536285898";
 	if (codes == password) {
-	  //window.location.href = 'https://www.editey.com/1HSZW5xLB0VDoyIV5J0Qxn8FPjYYa5atK/index.html';
 	  location.replace('https://www.editey.com/file/1HSZW5xLB0VDoyIV5J0Qxn8FPjYYa5atK');
 	}
 	else if (codes !== password) {
-	  //window.location.href = 'https://web.editey.com/1mMIGDF4O1KtWswlIk8G3xVBTdUJwMtZS/index.html';
 	  location.replace('https://web.editey.com/1mMIGDF4O1KtWswlIk8G3xVBTdUJwMtZS/index.html');
 	}
 }
@@ -175,8 +173,6 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
 		}
 
 		//grade letter A
@@ -185,19 +181,14 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num1;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade1 + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade1 + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
-		}
-
+        }
 		//grade letter A-
 		else if (seventh >= 90) {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num2;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade2 + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade2 + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
-		}
+        }
 
 		//grade letter B+
 		else if (seventh >= 87) {
@@ -205,9 +196,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num3; 
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade3 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade3 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-		}
+        }
 
 		//grade letter B
 		else if (seventh >= 83) {
@@ -215,29 +204,23 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num4;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade4 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade4 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-		}
+        }
 
 		//grade letter B-
 		else if (seventh >= 80) {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
-			document.getElementById("answer").innerHTML =num5;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade5 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade5 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-		}
-
+			document.getElementById("answer").innerHTML = num5;
+        }
+        
 		//grade letter C+
 		else if (seventh >= 77) {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num6;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade6 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade6 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-		}
+        }
 
 		//grade letter C
 		else if (seventh >= 73) {
@@ -245,9 +228,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num7;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade7 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade7 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-		}
+        }
 
 		//grade letter C-
 		else if (seventh >= 70) {
@@ -255,9 +236,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num8;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade8 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade8 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
-		}
+        }
 
 		//grade letter D+
 		else if (seventh >= 67) {
@@ -265,9 +244,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num9;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade9 + " in " + prompt("Please put your subject in.") + " You are going to FAIL if you get a lower grade.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade9 + " in " + prompt("Please put your subject in.") + " You are going to FAIL if you get a lower grade.";
-		}
+        }
 
 		//grade letter D
 		else if (seventh >= 60) {
@@ -275,9 +252,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num10;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade10 + " in " + prompt("Please put your subject in.") + " You are going to FAIL if you get a lower grade.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade10 + " in " + prompt("Please put your subject in.") + " You are going to FAIL if you get a lower grade.";
-		}
+        }
 
 		//grade letter F
 		else if (seventh <= 59) {
@@ -285,9 +260,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num11;
-			//document.getElementById("answer").innerHTML = name + " You Got an " + grade11 + " in " + prompt("Please put your subject in.") + " You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade11 + " in " + prompt("Please put your subject in.") + " You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
-		}
+        }
 	}, 3000);
 }
 
@@ -330,7 +303,6 @@ function grade() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + gradeA + " in " + subject + ". Good job keep it up.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + gradeA + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
 		}
 
 		//if the user put in a value of 2
@@ -339,7 +311,6 @@ function grade() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + gradeB + " in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + gradeB + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		//if the user put in a value of 3
@@ -348,7 +319,6 @@ function grade() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + gradeC + " in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + gradeC + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		//if the user put in a value of 4
@@ -357,7 +327,6 @@ function grade() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + gradeD + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + gradeC + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		//if the user put in a value of 5
@@ -366,7 +335,6 @@ function grade() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + gradeF + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
-			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + gradeC + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		//if the user put in a value of 6 or higer
@@ -401,7 +369,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got " + " over 100% " + " in " + subject + ". Good job keep it up.";
-			//document.getElementById("answer").innerHTML = name + " You Got " + " over 100% " + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
 		}
 
 		// the code for the A button
@@ -409,7 +376,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 95% to a 100%" + " in " + subject + ". Good job keep it up.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 95% to a 100%" + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
 		}
 
 		// the code for the A- button
@@ -417,7 +383,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 90%" + " in " + subject + ". Good job keep it up.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 90%" + " in " + prompt("Please put your subject in.") + " Good job keep it up.";
 		}
 
 		// the code for the B+ button
@@ -425,7 +390,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 87%" + "in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 87%" + "in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		// the code for the B button
@@ -433,7 +397,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 83%" + "in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 83%" + "in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		// the code for the B- button
@@ -441,7 +404,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 80%" + " in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 80%" + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		// the code for the C+ button
@@ -449,7 +411,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 77%" + " in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 77%" + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		// the code for the C button
@@ -465,7 +426,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 70% " + " in " + subject + ". Try a little harder on the next assignment.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 70% " + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
 
 		// the code for the D+ button
@@ -473,7 +433,6 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 67%" + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 67%" + " in " + prompt("Please put your subject in.") + " You are going to FAIL if you get a lower grade.";
 		}
 
 		// the code for the D button
@@ -481,15 +440,13 @@ function letters() {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = name + " You Got an " + " 60%" + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 60%" + " in " + prompt("Please put your subject in.") + " You are going to FAIL if you get a lower grade.";
 		}
 
 		// the code for the F button
 		else if (document.getElementById("F").checked) {
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("number").style.cursor = 'auto';
-			document.getElementById("answer").innerHTML = name + " You Got an " + " 59% or lower " + " in " + subject + ". You are going to FAIL this term. so try and get your grades up, and try to stay after if you can.";
-			//document.getElementById("answer").innerHTML = name + " You Got an " + " 59% or lower " + " in " + prompt("Please put your subject in.") + " You are going to FAIL this term. so try and get your grades up, and try to stay after if you can.";
+			document.getElementById("answer").innerHTML = name + " You Got an 59% or lower " + " in " + subject + ". You are going to FAIL this term. so try and get your grades up, and try to stay after if you can.";
 		}
 	}, 3000);
 }
