@@ -1,6 +1,6 @@
 //Calculate Tip
 function calculateTip() {
-  var select = document.getElementById("serviceQual").value;
+	var select = document.getElementById("serviceQual").value;
 	var billAmt = document.getElementById("billamt").value;
 	var serviceQual = document.getElementById("serviceQual").value;
 	var numOfPeople = document.getElementById("peopleamt").value;
@@ -13,18 +13,17 @@ function calculateTip() {
 
 	//if the user dosent Choose an option.
 	if(select === false){
-	  alert("you need to Choose an option");
-	  return;
+	  alert("You need to Choose an option");
+	  return false;
 	}
 	
 	var user = prompt("Put your name in if you want to.");
   if(user === null) {
-    for( var i=0; i<user; i++ ){
+    for( var i = 0; i < user; i++ ){
       alert(user);
     }
     return;
   }
-
 
 	//Check to see if this input is empty or less than or equal to 1
 	if (numOfPeople === "" || numOfPeople <= 1) {

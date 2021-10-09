@@ -79,20 +79,6 @@ function setText(id, val) {
 //showes the clock time.
 window.onload = clock;
 
-//the code for the sourcecode.
-function code() {
-	var codes = document.getElementById("codes").value;
-	document.getElementById("body").style.cursor = 'progress';
-	document.getElementById("code").style.cursor = 'progress';
-	var password = "18643728536285898";
-	if (codes == password) {
-	  location.replace('https://www.editey.com/file/1HSZW5xLB0VDoyIV5J0Qxn8FPjYYa5atK');
-	}
-	else if (codes !== password) {
-	  location.replace('https://web.editey.com/1mMIGDF4O1KtWswlIk8G3xVBTdUJwMtZS/index.html');
-	}
-}
-
 //Covert number grade to letter grade.
 function grades() {
   var name = window.prompt("Put your name in, if you want.");

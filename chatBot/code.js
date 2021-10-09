@@ -147,11 +147,13 @@ function Privacy() {
 	var output = document.getElementById("output");
 	output.innerHTML = 'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>'+
 					   'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>'+
-					   'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, ' +
+					   'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, </br>' +
 					   'it will send you to someone who is trained to deal with what you are feeling.';
+	
 	if (output.style.display === "block") {
 		output.style.display = "none";
 	}
+
     else {
 		output.style.display = "block";
 	}
