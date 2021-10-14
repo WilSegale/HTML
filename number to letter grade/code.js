@@ -98,7 +98,7 @@ function grades() {
 	var grade10 = "D";
 	var grade11 = "F";
 	var special_character = "A";
-	var num  = name + " You Got an " + grade + " in " + subject + ". Good job keep it up.";
+	var num0  = name + " You Got an " + grade + " in " + subject + ". Good job keep it up.";
 	var num1 = name + " You Got an " + grade1 + " in " + subject + ". Good job keep it up.";
 	var num2 = name + " You Got an " + grade2 + " in " + subject + ". Good job keep it up.";
 	var num3 = name + " You Got an " + grade3 + " in " + subject + ". Try a little harder on the next assignment.";
@@ -135,7 +135,6 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = part1;
-			//document.getElementById("answer").innerHTML += error.charAt(g);g++;
 		}
 
 		//if the user put in a value below 0
@@ -151,7 +150,6 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = part1;
-			//document.getElementById("answer").innerHTML += error.charAt(g++);
 		}
 
 		// grade letter A+
@@ -159,7 +157,7 @@ function grades() {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
-			document.getElementById("answer").innerHTML = num;
+			document.getElementById("answer").innerHTML = num0;
 		}
 
 		//grade letter A
