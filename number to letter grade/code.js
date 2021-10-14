@@ -1,5 +1,5 @@
 ///say the IP for a crent amount of time.
-var getIPAddress = function(){
+var getIPAddress = function(){d
   $.getJSON("https://jsonip.com/", function(data) {
     var elem = document.getElementById('IP');
     elem.parentNode.removeChild(elem);
@@ -15,6 +15,7 @@ var getIPAddress = function(){
       $('#ip').fadeOut("slow");
       $('#countdown').fadeOut("slow");
     }
+	
     else{
       document.getElementById("countdown").innerHTML = "You will not be able to see your IP address in " + timeleft + "S";
     }

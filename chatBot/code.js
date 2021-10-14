@@ -1,4 +1,5 @@
 //list of quotes for the users to read
+var seconds = "0000"
 const problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
@@ -57,7 +58,7 @@ function info() {
 					 "What are you struggling with?";
 	setTimeout(function () {
 		info.innerHTML = "";
-	}, 100000);
+	}, 1+seconds);
 }
 
 //if the enter key is pressed it makes the site work
@@ -110,18 +111,18 @@ function NeedHelp() {
 	var output = document.getElementById("output");
 	var HelpUser = Math.floor((Math.random() * Help.length));
 	output.innerHTML = 'Please wait im trying to find a site that will best help you.';
-	output.style.cursor="progress"
+	output.style.cursor="progress";
 
 	setTimeout(function () {
-		output.style.cursor="auto"
+		output.style.cursor="auto";
 		for (var i = 0; i < Help.length; i++) {
 			if (output) {
 				output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " +
 				Help[HelpUser] + "This website might help you. " +
-				HelpLinks[links];
+				HelpLinks[HelpLinks];
 			}
 		}
-	}, 3000);
+	}, 3+seconds);
 }
 
 //tell the users that they will find a program that might help you with your thoughts
@@ -130,16 +131,16 @@ function NeedHelp() {
 	var HelpUser = Math.floor((Math.random() * Help.length));
 	var links = Math.floor((Math.random() * HelpLinks.length));
 	output.innerHTML = 'Please wait im trying to find a site that will best Help you.';
-	output.style.cursor = "progress"
+	output.style.cursor = "progress";
 
 	setTimeout(function () {
-		output.style.cursor="auto"
+		output.style.cursor="auto";
 		for (var i = 0; i < Help.length; i++) {
 			output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " +
 			Help[HelpUser] + "This website might help you. " +
 			HelpLinks[links];
 		}
-	}, 3000);
+	}, 3+seconds);
 }
 
 //tell the users that nothing is shared and nothing is saved on the site
@@ -157,4 +158,4 @@ function Privacy() {
     else {
 		output.style.display = "block";
 	}
-};
+}

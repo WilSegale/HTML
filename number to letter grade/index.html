@@ -29,17 +29,15 @@
           <p id="message"></p>
         </b>
       </div>
-      <input type="text" id="code" autocomplete="off"/>
-      <input type="button" id="codes"  onclick="code()"/>
-      <div class="centerTitle">Number to Letter grade</div>
+        <div class="centerTitle">Number to Letter grade</div>
       <br>
       <!--the code of the text box start-->
-      <input type="text" id="seventhNums"  placeHolder="Put your nummber grade in." autocomplete="off"/>
-      <input type="button" id="seventhNum" value="grade" onclick="grades()">
+        <input type="text" id="seventhNums"  placeHolder="Put your nummber grade in." autocomplete="off"/>
+        <input type="button" id="seventhNum" value="grade" onclick="grades()">
       <br>
       <br>
-      <input type="text" id="numbers"  placeHolder="Put your grade in form 1 to 5"  autocomplete="off"/>
-      <input type="button" id="number" value="grade" onclick="grade()"/>
+        <input type="text" id="numbers"  placeHolder="Put your grade in form 1 to 5"  autocomplete="off"/>
+        <input type="button" id="number" value="grade" onclick="grade()"/>
       <br>
       <!--radio buton code start-->
       <label id='letters'>
@@ -103,17 +101,6 @@
       	weekday[5] = "Today is Friday. Are you happy for the weekend?";
       	weekday[6] = "Today is Saturday.";
       	var today = weekday[today.getDay()];
-      	if (today == weekday[3]) {
-      		document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";}
-      	else if (today == weekday[5]) {
-      	  document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";}
-      	else if (today == weekday[6]) {
-      	  document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";} 
-        else if (today == weekday[0]) {
-      	  document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";} 
-      	else {
-      	  document.body.style.backgroundImage = "url('https://media.giphy.com/media/rHuBz74fk4Pio/giphy.gif')"
-      	}
       }
       
       //Displays Today’s Date when you press the button that say 'What's today
@@ -150,25 +137,6 @@
         setInterval(typeWriter, 100);
       }
       
-      if (today == weekday[3]) {
-        document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";
-        
-      }
-      
-      else if (today == weekday[5]) {
-        document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";
-        
-      } 
-      
-      else if (today == weekday[6]) {
-        document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";
-        
-      }
-      
-      else if (today == weekday[0]) {
-        document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FfxwpwPOhNknT2%2Fgiphy.gif&f=1&nofb=1')";
-        
-      }
       
       else {
         document.body.style.backgroundImage = "url('https://media.giphy.com/media/rHuBz74fk4Pio/giphy.gif')";
