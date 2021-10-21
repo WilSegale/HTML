@@ -3,7 +3,7 @@
   text-align:center;
 }
 #input{
-  width: 150px;
+  width: 12%;
 }
 
 img{
@@ -13,5 +13,4 @@ img{
 /*if the user hovers over the Privacy link it makes it bigger. So if the user has bad eyes they can read it better*/
 .Privacy:hover{
   text-align: right;
-  font-size:50px;
 }

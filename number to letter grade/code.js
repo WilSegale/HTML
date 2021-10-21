@@ -1,26 +1,25 @@
 ///say the IP for a crent amount of time.
-var getIPAddress = function(){d
-  $.getJSON("https://jsonip.com/", function(data) {
-    var elem = document.getElementById('IP');
-    elem.parentNode.removeChild(elem);
-    document.getElementById("ip").innerHTML += "Your IP address is: " + data.ip;
-  });
-  // brake;
-  var timeleft = 30;
-  var downloadTimer = setInterval(function(){
-    document.getElementById("countdown").style.background = "white";
-    document.getElementById("ip").style.background = "white";
-    if(timeleft < 0){
-      clearInterval(downloadTimer);
-      $('#ip').fadeOut("slow");
-      $('#countdown').fadeOut("slow");
-    }
-	
-    else{
-      document.getElementById("countdown").innerHTML = "You will not be able to see your IP address in " + timeleft + "S";
-    }
-    timeleft -= 1;
-  },1000);
+var getIPAddress = function () {
+	d
+	$.getJSON("https://jsonip.com/", function (data) {
+		var elem = document.getElementById('IP');
+		elem.parentNode.removeChild(elem);
+		document.getElementById("ip").innerHTML += "Your IP address is: " + data.ip;
+	});
+	// brake;
+	var timeleft = 30;
+	var downloadTimer = setInterval(function () {
+		document.getElementById("countdown").style.background = "white";
+		document.getElementById("ip").style.background = "white";
+		if (timeleft < 0) {
+			clearInterval(downloadTimer);
+			$('#ip').fadeOut("slow");
+			$('#countdown').fadeOut("slow");
+		} else {
+			document.getElementById("countdown").innerHTML = "You will not be able to see your IP address in " + timeleft + "S";
+		}
+		timeleft -= 1;
+	}, 1000);
 };
 
 //clears the console and shows the password to goto the soucrecode
@@ -82,7 +81,7 @@ window.onload = clock;
 
 //Covert number grade to letter grade.
 function grades() {
-  var name = window.prompt("Put your name in, if you want.");
+	var name = window.prompt("Put your name in, if you want.");
 	var subject = window.prompt("Please put your subject in.");
 	var part1 = "Sorry letters and special characters are not allowed";
 	var grade = "A+";
@@ -98,7 +97,7 @@ function grades() {
 	var grade10 = "D";
 	var grade11 = "F";
 	var special_character = "A";
-	var num0  = name + " You Got an " + grade + " in " + subject + ". Good job keep it up.";
+	var num0 = name + " You Got an " + grade + " in " + subject + ". Good job keep it up.";
 	var num1 = name + " You Got an " + grade1 + " in " + subject + ". Good job keep it up.";
 	var num2 = name + " You Got an " + grade2 + " in " + subject + ". Good job keep it up.";
 	var num3 = name + " You Got an " + grade3 + " in " + subject + ". Try a little harder on the next assignment.";
@@ -110,7 +109,7 @@ function grades() {
 	var num9 = name + " You Got an " + grade9 + " in " + subject + ". You are going to FAIL if you get a lower grade.";
 	var num10 = name + " You Got an " + grade10 + " in " + subject + ".You are going to FAIL if you get a lower grade.";
 	var num11 = name + " You Got an " + grade11 + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
-	
+
 	var seventh = document.getElementById("seventhNums").value;
 	//the prgress
 	document.getElementById("box").style.background = "white";
@@ -121,7 +120,7 @@ function grades() {
 	var g = 0;
 	setTimeout(function () {
 		//have the computer write the users output
-		
+
 		// var error = document.getElementById("answer").innerHTML="Sorry letters and special characters are not allowed";
 		if (subject === "") {
 			window.location.reload(true);
@@ -143,7 +142,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 		}
-		
+
 		// if the user doesn't put in any value
 		else if (seventh === "" || seventh.includes(" ")) {
 			document.getElementById("box").style.background = "white";
@@ -166,22 +165,22 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num1;
-        }
+		}
 		//grade letter A-
 		else if (seventh >= 90) {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num2;
-        }
+		}
 
 		//grade letter B+
 		else if (seventh >= 87) {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
-			document.getElementById("answer").innerHTML = num3; 
-        }
+			document.getElementById("answer").innerHTML = num3;
+		}
 
 		//grade letter B
 		else if (seventh >= 83) {
@@ -189,7 +188,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num4;
-        }
+		}
 
 		//grade letter B-
 		else if (seventh >= 80) {
@@ -197,15 +196,15 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num5;
-        }
-        
+		}
+
 		//grade letter C+
 		else if (seventh >= 77) {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num6;
-        }
+		}
 
 		//grade letter C
 		else if (seventh >= 73) {
@@ -213,7 +212,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num7;
-        }
+		}
 
 		//grade letter C-
 		else if (seventh >= 70) {
@@ -221,7 +220,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num8;
-        }
+		}
 
 		//grade letter D+
 		else if (seventh >= 67) {
@@ -229,7 +228,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num9;
-        }
+		}
 
 		//grade letter D
 		else if (seventh >= 60) {
@@ -237,7 +236,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num10;
-        }
+		}
 
 		//grade letter F
 		else if (seventh <= 59) {
@@ -245,7 +244,7 @@ function grades() {
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("answer").innerHTML = num11;
-        }
+		}
 	}, 3000);
 }
 
@@ -267,10 +266,10 @@ function grade() {
 	document.getElementById("answer").innerHTML = "please wait...";
 	var grades = document.getElementById("numbers").value;
 	setTimeout(function () {
-	  
-	  //if the subject dosent have any input it reload the page
-	  if (subject === "") {
-		  window.location.reload(true);
+
+		//if the subject dosent have any input it reload the page
+		if (subject === "") {
+			window.location.reload(true);
 			document.getElementById("box").style.background = "tan";
 		}
 
@@ -342,7 +341,7 @@ function letters() {
 	document.getElementById("body").style.cursor = 'progress';
 	document.getElementById("answer").innerHTML = "please wait...";
 	setTimeout(function () {
-	  
+
 		//the output box
 		if (subject === "") {
 			window.location.reload(true);

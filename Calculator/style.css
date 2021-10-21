@@ -1,0 +1,120 @@
+body{
+    background:white;
+  }
+  @media only screen and (orientation: landscape) {
+      #scan,
+      #stopScan,
+      #textbox,
+      #copy,
+      #today,
+      #IP {
+          display: none;
+      }
+  }
+  
+  ::-moz-selection {
+      background-color: transparent;
+      color: white;
+  }
+  
+  
+  /*styles what today is */
+  
+  #whats_today {
+      box-shadow: gray 5px 6px 5px;
+      border-radius: 50px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+  }
+  
+  
+  /*styles what today is */
+  
+  #whats_today:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+  }
+  
+  #whats_today:disabled {
+      text-decoration: line-through;
+      color: black;
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+  }
+  
+  
+  /*input box*/
+  
+  input {
+      font-size: 20px;
+      border-radius: 50px;
+  }
+  
+  
+  /*output*/
+  
+  #result {
+      width: auto;
+      font-size: 20px;
+  }
+  
+  
+  /*input button*/
+  
+  input[type="button"] {
+      background: white;
+      color: black;
+      border-color: black;
+      width: 100%;
+  }
+  
+  
+  /*input button*/
+  
+  input[type="button"]:active {
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+  }
+  
+  
+  /*input text*/
+  
+  input[type="text"] {
+      color: black;
+      background-color: white;
+      border: solid black 2px;
+  }
+  
+  
+  /*the calculator*/
+  
+  #Calculator {
+      color: black;
+  }
+  
+  
+  /*the clear button*/
+  
+  .c:hover {
+      background: red;
+  }
+  
+  
+  /*the solve button*/
+  
+  .solve:hover {
+      background: lime;
+  }
+  
+  :focus {
+      color: black;
+      outline: none;
+  }

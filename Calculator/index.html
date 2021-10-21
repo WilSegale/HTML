@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="code.js"></script>
+      <link rel="stylesheet" href="style.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+   </head>
+   <body id="body" onload="Screens()" class="btn btn-primary btn-block" ondragstart="return false;" ondrop="return false;" oncopy="return true" oncut="return false" onpaste="return true"  oncontextmenu="return true;">
+      <div id="countdown"></div>
+      <button onclick="getIPAddress()" id="IP">What is my IP?</button> 
+      <p id="ip"></p>
+      <button onclick="Whats_today()" id="today">What's Today</button>
+      <center>
+         <table>
+            <tr>
+               <td colspan="3" id="button"><input type="text" id="result" onkeypress="keycode(event)" oncopy="return true" autocomplete="off"/>
+               <td id="button"><input type="button" value="c" onclick="clr()" class="c" /></td>
+               <td><input type="button" value="<-" onclick="javascript:removeTextTag()"/></td>
+            </tr>
+            <tr id="button" display="none">
+               <td><input type="button"  value="1" onclick="dis('1')" /></td>
+               <td><input type="button"  value="2" onclick="dis('2')"/></td>
+               <td><input type="button"  value="3" onclick="dis('3')"/></td>
+               <td><input type="button"  value="&divide;" onclick="dis('/')"/></td>
+               <td><input type="button"  value="&pi;" onclick="dis('3.14')"/></td>
+               <td><input type="button"  value="^" onclick="dis('^')"/></td>
+            </tr>
+            <tr id="button">
+               <td><input type="button"  value="4" onclick="dis('4')"/></td>
+               <td><input type="button"  value="5" onclick="dis('5')"/></td>
+               <td><input type="button"  value="6" onclick="dis('6')"/></td>
+               <td><input type="button"  value="*" onclick="dis('*')"/></td>
+            </tr>
+            <tr id="button">
+               <td><input type="button"  value="7" onclick="dis('7')"/></td>
+               <td><input type="button"  value="8" onclick="dis('8')"/></td>
+               <td><input type="button"  value="9" onclick="dis('9')"/></td>
+               <td><input type="button"  value="-" onclick="dis('-')"/></td>
+            </tr>
+            <tr id="button">
+               <td><input type="button"  value="." onclick="dis('.')"/></td>
+               <td><input type="button"  value="0" onclick="dis('0')"/></td>
+               <td><input type="button"  value="=" onclick="solve()" /></td>
+               <td><input type="button"  value="+" onclick="dis('+')"/></td>
+            </tr>
+         </table>
+      </center>
+      <button onclick="copy()" id="copy">Copy number</button>
+      <p id="output">Answer: </p>
+      <button onclick="scan()" id="scan">scan</button>
+      <button onclick="stopScan()" id="stopScan" style="display:none;">clear</button>
+      <p id="scans"></p>
+      <input type="textbox" id="textbox">
+   </body>
+</html>

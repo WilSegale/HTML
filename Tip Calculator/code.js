@@ -12,26 +12,26 @@ function calculateTip() {
 	}
 
 	//if the user dosent Choose an option.
-	if(select === false){
-	  alert("You need to Choose an option");
-	  return false;
+	if (select === false) {
+		alert("You need to Choose an option");
+		return false;
 	}
-	
+
 	var user = prompt("Put your name in if you want to.");
-  if(user === null) {
-    for( var i = 0; i < user; i++ ){
-      alert(user);
-    }
-    return;
-  }
+	if (user === null) {
+		for (var i = 0; i < user; i++) {
+			alert(user);
+		}
+		return;
+	}
 
 	//Check to see if this input is empty or less than or equal to 1
 	if (numOfPeople === "" || numOfPeople <= 1) {
 		document.getElementById("each").style.display = "none";
-		document.getElementById("input").innerHTML = user + " You would need to tip that person " + " " ;
+		document.getElementById("input").innerHTML = user + " You would need to tip that person " + " ";
 
 	} else {
-		document.getElementById("input").innerHTML = user + " You would each need to tip that person " + " " ;
+		document.getElementById("input").innerHTML = user + " You would each need to tip that person " + " ";
 		document.getElementById("each").style.display = "block";
 	}
 

@@ -1,5 +1,5 @@
 //list of quotes for the users to read
-var seconds = "0000"
+const seconds = "0000"
 const problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
@@ -54,11 +54,11 @@ const HelpLinks = [
 function info() {
 	var info = document.getElementById("info");
 	info.innerHTML = "Hello, my name is Chatty The ChatBot." +
-					 "I'm here to help you with your problems." +
-					 "What are you struggling with?";
+		"I'm here to help you with your problems." +
+		"What are you struggling with?";
 	setTimeout(function () {
 		info.innerHTML = "";
-	}, 1+seconds);
+	}, 1 + seconds);
 }
 
 //if the enter key is pressed it makes the site work
@@ -68,11 +68,11 @@ function Enter(event) {
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
-	if (input.includes("hurt someone") && EnterKey == 13 || 
-		input.includes("cutting") && EnterKey == 13 || 
-		input.includes("die") && EnterKey == 13 || 
+	if (input.includes("hurt someone") && EnterKey == 13 ||
+		input.includes("cutting") && EnterKey == 13 ||
+		input.includes("die") && EnterKey == 13 ||
 		input.includes("alive") && EnterKey == 13) {
-		NeedHelp(); //this function will send the user to a differnet function that will say "I am not trained in this but let me find you some one who is please hold"
+		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} else {
 		for (var i = 0; i < problems.length; i++) {
 			if (input && EnterKey == 13) {
@@ -85,16 +85,16 @@ function Enter(event) {
 }
 
 //randomly outputs motivation quotes
-function output() {
+function NeedHelp() {
 	var input = document.getElementById("input").value;
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
-	if (input.includes("hurt someone") || 
-		input.includes("cutting") || 
-		input.includes("die") || 
+	if (input.includes("hurt someone") ||
+		input.includes("cutting") ||
+		input.includes("die") ||
 		input.includes("alive")) {
-		NeedHelp(); //this function will send the user to a differnet function that will say "I am not trained in this but let me find you some one who is please hold"
+		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} else {
 		for (var i = 0; i < problems.length; i++) {
 			if (input) {
@@ -105,28 +105,7 @@ function output() {
 	}
 }
 
-
-//outputs the name of the program that will help the user
-function NeedHelp() {
-	var output = document.getElementById("output");
-	var HelpUser = Math.floor((Math.random() * Help.length));
-	output.innerHTML = 'Please wait im trying to find a site that will best help you.';
-	output.style.cursor="progress";
-
-	setTimeout(function () {
-		output.style.cursor="auto";
-		for (var i = 0; i < Help.length; i++) {
-			if (output) {
-				output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " +
-				Help[HelpUser] + "This website might help you. " +
-				HelpLinks[HelpLinks];
-			}
-		}
-	}, 3+seconds);
-}
-
-//tell the users that they will find a program that might help you with your thoughts
-function NeedHelp() { 
+function output() {
 	var output = document.getElementById("output");
 	var HelpUser = Math.floor((Math.random() * Help.length));
 	var links = Math.floor((Math.random() * HelpLinks.length));
@@ -134,28 +113,49 @@ function NeedHelp() {
 	output.style.cursor = "progress";
 
 	setTimeout(function () {
-		output.style.cursor="auto";
+		output.style.cursor = "auto";
 		for (var i = 0; i < Help.length; i++) {
-			output.innerHTML = "I am sorry to here that you are feeling this way. This program will help fix that. " +
-			Help[HelpUser] + "This website might help you. " +
-			HelpLinks[links];
+			output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
+				Help[HelpUser] + "This website might help you. " +
+				HelpLinks[links];
 		}
-	}, 3+seconds);
+	}, 3 + seconds);
 }
+//outputs the name of the program that will help the user
+function NeedHelp() {
+	var output = document.getElementById("output");
+	var HelpUser = Math.floor((Math.random() * Help.length));
+	var links = Math.floor((Math.random() * HelpLinks.length));
+
+	output.innerHTML = 'Please wait im trying to find a site that will best help you.';
+	output.style.cursor = "progress";
+
+	setTimeout(function () {
+		output.style.cursor = "auto";
+		for (var i = 0; i < Help.length; i++) {
+			if (output) {
+				output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
+					Help[HelpUser] + "This website might help you. " +
+					HelpLinks[links];
+			}
+		}
+	}, 3 + seconds);
+}
+
+//tell the users that they will find a program that might help you with your thoughts
+
 
 //tell the users that nothing is shared and nothing is saved on the site
 function Privacy() {
 	var output = document.getElementById("output");
-	output.innerHTML = 'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>'+
-					   'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>'+
-					   'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, </br>' +
-					   'it will send you to someone who is trained to deal with what you are feeling.';
-	
+	output.innerHTML = 'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>' +
+		'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>' +
+		'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, </br>' +
+		'it will send you to someone who is trained to deal with what you are feeling.';
+
 	if (output.style.display === "block") {
 		output.style.display = "none";
-	}
-
-    else {
+	} else {
 		output.style.display = "block";
 	}
 }
