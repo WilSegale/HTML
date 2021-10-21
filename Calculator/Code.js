@@ -25,7 +25,19 @@ var getIPAddress = function () {
 
 //scans the devices for certen things
 function scan() {
-	var scan = document.getElementById("scans").innerHTML += "javaEnabled is " + navigator.javaEnabled() + "<br>" + "<br>" + " The language is " + navigator.language + "<br>" + "<br>" + document.getElementById("scans").innerHTML + "navigator.platform is " + navigator.platform + "<br>" + "<br>" + document.getElementById("scans").innerHTML + navigator.userAgent + "<br>" + "<br>" + document.getElementById("scans").innerHTML + navigator.appVersion + "<br>" + "<br>" + document.getElementById("scans").innerHTML + "navigator.appCodeName is " + navigator.appCodeName + "<br>" + "<br>" + document.getElementById("scans").innerHTML + "navigator.cookieEnabled is " + navigator.cookieEnabled + "<br>" + "<br>" + document.getElementById("scans").innerHTML + navigator.appVersion;
+	var scan = document.getElementById("scans").innerHTML += "javaEnabled is " +
+                                                              navigator.javaEnabled() + "<br>" + "<br>" + " The language is " 
+                                                              + navigator.language + "<br>" + "<br>" + 
+                                                              document.getElementById("scans").innerHTML 
+                                                              + "navigator.platform is " + navigator.platform + "<br>" + "<br>" + 
+                                                              document.getElementById("scans").innerHTML + navigator.userAgent 
+                                                              + "<br>" + "<br>" + document.getElementById("scans").innerHTML + 
+                                                              navigator.appVersion + "<br>" + "<br>" + 
+                                                              ocument.getElementById("scans").innerHTML + "navigator.appCodeName is " + 
+                                                              navigator.appCodeName + "<br>" + "<br>" + 
+                                                              document.getElementById("scans").innerHTML + "navigator.cookieEnabled is " + 
+                                                              navigator.cookieEnabled + "<br>" + "<br>" + 
+                                                              document.getElementById("scans").innerHTML + navigator.appVersion;
 	document.getElementById("scan").style.display = "none";
 	document.getElementById("stopScan").style.display = "block";
 	console.log(scan);
@@ -50,13 +62,15 @@ function keycode(event, val) {
 	var answer = eval(input);
 	
 	var C = 99;
+    var c = 67;
 	var Enter = 13;
 	if (input && Key == Enter) {
-	  document.getElementById("output").innerHTML += "</br>" + input + " = " + answer + "  ";
+	  document.getElementById("output").innerHTML += "</br>" + input + " = " + answer + " ";
 		user.value = answer;
 	}
 	
-	if (input && Key == C || user && Key == C) { //if the user presses the C key it will clear the input feild
+	else if (input && Key == C || Key == c || 
+        user && Key == C  || key == c) { //if the user presses the C key it will clear the input feild
 		user.style.color = 'white';
 		setTimeout(function () {
 			user.style.color = 'black';
@@ -67,16 +81,19 @@ function keycode(event, val) {
 
 //solves the equation
 function solve(val) {
+
 	var input = document.getElementById("result").value;
 	var answer = eval(input);
+
 	if (eval.length >= 3) {
 		document.getElementById("result").value = "," + answer;
 	}
 
 	document.getElementById("scans").innerHTML = "";
+	
 	if (input) {
 		document.getElementById("result").value = answer;//outputs the answer
-	  document.getElementById("output").innerHTML += "</br>" + input + " = " + answer + "  ";
+		document.getElementById("output").innerHTML += "</br>" + input + " = " + answer + "  ";
 		console.log("The answer is " + "(" + answer + ")");
 		document.getElementById("scan").disabled = false;
 	} 
