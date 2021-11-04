@@ -1,0 +1,57 @@
+.seventhNum{
+    cursor: auto;
+      
+    }
+    body {
+        width: auto;
+        height: auto;
+    }
+    
+    #logo {
+        background-color: #6699ff;
+        width: auto;
+    }
+    
+    .clearEm {
+        clear: both;
+    }
+    
+    .right {
+        float: right;
+        width: 250px;
+        height: 250px;
+    }
+    
+    .left {
+        overflow: hidden;
+        width: auto;
+    }
+    
+    .centerTitle {
+        width: 100%;
+        text-align: center;
+        padding-top: 35px;
+        font-size: 3rem;
+    }
+    
+    #centerSection {
+        margin: auto;
+        width: 760px;
+    }
+    
+    .boxes {
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        margin: 25px;
+    }
+    
+    #footer {
+        background-color: #ff9999;
+        height: 100px;
+        width: 100%;
+    }
+    
+    #today {
+        font-size: 50px;
+    }

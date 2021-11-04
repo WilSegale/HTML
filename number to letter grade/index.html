@@ -33,10 +33,11 @@
       <br>
       <!--the code of the text box start-->
         <input type="text" id="seventhNums"  placeHolder="Put your nummber grade in." autocomplete="off"/>
-        <input type="button" id="seventhNum" value="grade" onclick="grades()">
+        <input type="button" id="seventhNum" value="grade" onclick="grades()"/>
       <br>
       <br>
         <input type="text" id="numbers"  placeHolder="Put your grade in form 1 to 5"  autocomplete="off"/>
+        
         <input type="button" id="number" value="grade" onclick="grade()"/>
       <br>
       <!--radio buton code start-->
@@ -75,7 +76,7 @@
       </div>
       <!-- displays today start -->
       <p id="today" class="today" onload="today()"></p>
-      <p id="tomorrow" class="tomorrow" onload="tomorrow"></p>
+      <p id="tomorrow" class="tomorrow" onload="tomorrow()"></p>
       <script>
 
       function noBack() {
@@ -175,7 +176,7 @@
       	weekday[4] = "Tomorrow will be Thursday.";
       	weekday[5] = "Tomorrow will be Friday.";
       	weekday[6] = "Tomorrow will be Saturday.";
-      	var tomorrow = weekday[tomorrow.getDay().length = 0];
+      	var tomorrow = weekday[tomorrow.getDay()];
       	alert(tomorrow)
       }
       
