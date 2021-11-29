@@ -1,64 +1,63 @@
-  /*input box*/
-  
-  input {
-      font-size: 20px;
-      border-radius: 50px;
-  }
-  
-  
-  /*output*/
-  
-  #result {
-      width: auto;
-      font-size: 20px;
-  }
-  
-  
-  /*input button*/
-  
-  input[type="button"] {
-      background: white;
-      color: black;
-      border-color: black;
-      width: 100%;
-  }
-  
-  
-  /*input button*/
-  
-  input[type="button"]:active {
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-  }
-  
-  
-  /*input text*/
-  
-  input[type="text"] {
-      color: black;
-      background-color: white;
-      border: solid black 2px;
-  }
-  
-  
-  /*the calculator*/
-  
-  #Calculator {
-      color: black;
-  }
-  
-  
-  /*the clear button*/
-  
-  .c:hover {
-      background: red;
-  }
-  
-  
-  /*the solve button*/
-  
-  
-  :focus {
-      color: black;
-      outline: none;
-  }
+/*input box*/
+
+input {
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+
+/*output*/
+
+#result {
+    width: auto;
+    font-size: 20px;
+}
+
+
+/*input button*/
+
+input[type="button"] {
+    background: white;
+    color: black;
+    border-color: black;
+    width: 100%;
+}
+
+
+/*input button*/
+
+input[type="button"]:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+/*input text*/
+
+input[type="text"] {
+    color: black;
+    background-color: white;
+    border: solid black 2px;
+}
+
+
+/*the calculator*/
+
+#Calculator {
+    color: black;
+}
+
+
+/*the clear button*/
+
+.c:hover {
+    background: red;
+}
+
+
+/*the solve button*/
+
+:focus {
+    color: black;
+    outline: none;
+}
