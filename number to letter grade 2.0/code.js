@@ -231,7 +231,7 @@ function grades() {
 		}
 
 		//grade letter F
-		else if (seventh <= 59) {
+		else{
 			gardes.innerHTML = "You got an " + " F " + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
 		}
 	}, 3000);
