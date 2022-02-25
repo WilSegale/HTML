@@ -62,6 +62,7 @@ try {
 
 			//if the prompt has any numbers or doesn't have any input it shows an error message.
 			var subject = prompt("Put your subject in");
+			
 			if (subject > 0) {
 				alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
 				return;

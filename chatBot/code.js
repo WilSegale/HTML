@@ -1,5 +1,6 @@
 //list of quotes for the users to read
 const seconds = "0000"
+
 const problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
@@ -121,6 +122,7 @@ function output() {
 		}
 	}, 3 + seconds);
 }
+
 //outputs the name of the program that will help the user
 function NeedHelp() {
 	var output = document.getElementById("output");
@@ -144,14 +146,14 @@ function NeedHelp() {
 
 //tell the users that they will find a program that might help you with your thoughts
 
-
 //tell the users that nothing is shared and nothing is saved on the site
 function Privacy() {
 	var output = document.getElementById("output");
-	output.innerHTML = 'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>' +
+	output.innerHTML = 
+		'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>' +
 		'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>' +
 		'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, </br>' +
-		'it will send you to someone who is trained to deal with what you are feeling.';
+		'it will send you to someone who is trained to deal with what you are feeling.'
 
 	if (output.style.display === "block") {
 		output.style.display = "none";
