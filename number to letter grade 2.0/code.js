@@ -1,4 +1,5 @@
 try {
+	var seconds = "0000"
     //saves data 
 	function setCookie(cname, cvalue, exdays) {
 		const d = new Date();
@@ -35,13 +36,13 @@ try {
 			);
 		} else {
 			user = prompt("Please enter your name:", "");
+
 			if (user != "" && user != null) {
 				setCookie("username", user, 30);
 			}
 		}
 	}
 	window.onload = checkCookie;
-	
 	//savse data end
 	//Covert number grade to letter grade
 
@@ -49,14 +50,14 @@ try {
 	function keycode(event) {
 		var gardes = document.getElementById("answer");
 
-		var x = event.keyCode;
-		var seventh = document.getElementById("seventhNum").value;
+		var keycode = event.keyCode;
+		var grade = document.getElementById("seventhNum").value;
 
-		if (seventh && x == 13) {
+		if (grade && keycode == 13) {
 			//if the input box doesn't have any value does it does nothing.
 
 			document.getElementById("body").style.cursor = "progress";
-			if (seventh === "") {
+			if (grade === "") {
 				return;
 			}
 
@@ -88,60 +89,158 @@ try {
 				}
 
 				//grade letter A
-				else if (seventh >= 94 || seventh == 100) {
+				else if (grade >= 94 || grade == 100) {
 					gardes.innerHTML = "You got an A in " + subject + ". Good job keep it up.";
 				}
 
 				//grade letter A-
-				else if (seventh >= 90) {
+				else if (grade >= 90) {
 					gardes.innerHTML = "You got an A- in " + subject + ". Good job keep it up.";
 				}
 
 				//grade letter B+
-				else if (seventh >= 87) {
+				else if (grade >= 87) {
 					gardes.innerHTML = "You got an B+ in " + subject + ". Try a little harder on the next assignment.";
 				}
 
 				//grade letter B
-				else if (seventh >= 83) {
+				else if (grade >= 83) {
 					gardes.innerHTML = "You got an B in " + subject + ". Try a little harder on the next assignment.";
 				}
 
 				//grade letter B-
-				else if (seventh >= 80) {
+				else if (grade >= 80) {
 					gardes.innerHTML = "You got an B- in " + subject + ". Try a little harder on the next assignment.";
 				}
 
 				//grade letter C+
-				else if (seventh >= 77) {
+				else if (grade >= 77) {
 					gardes.innerHTML = "You got an C+ in " + subject + ". Try a little harder on the next assignment.";
 				}
 
 				//grade letter C
-				else if (seventh >= 73) {
+				else if (grade >= 73) {
 					gardes.innerHTML = "You got an C in " + subject + ". Try a little harder on the next assignment.";
 				}
 
 				//grade letter C-
-				else if (seventh >= 70) {
+				else if (grade >= 70) {
 					gardes.innerHTML = "You got an C- in " + subject + ". Try a little harder on the next assignment.";
 				}
 
 				//grade letter D+
-				else if (seventh >= 67) {
+				else if (grade >= 67) {
 					gardes.innerHTML = "You got an D+ in " + subject + ". You are going to FAIL if you get a lower grade.";
 				}
 
 				//grade letter D
-				else if (seventh >= 60) {
+				else if (grade >= 60) {
 					gardes.innerHTML = "You got an D in " + subject + ". You are going to FAIL if you get a lower grade.";
 				}
 
 				//grade letter F
-				else if (seventh <= 59) {
+				else{
 					gardes.innerHTML = "You got an F in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
 				}
-			}, 3000);
+			}, 3+seconds);
+		}
+	}
+	function grades(){
+		var gardes = document.getElementById("answer");
+
+		var keycode = event.keyCode;
+		var grade = document.getElementById("seventhNum").value;
+
+		if (grade && keycode == 13) {
+			//if the input box doesn't have any value does it does nothing.
+
+			document.getElementById("body").style.cursor = "progress";
+			if (grade === "") {
+				return;
+			}
+
+			//if the prompt has any numbers or doesn't have any input it shows an error message.
+			var subject = prompt("Put your subject in");
+			
+			if (subject > 0) {
+				alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
+				return;
+			}
+
+			//if the user does not input anything it continuously says 'put your subject in.'
+			else if (subject === "") {
+				for (subject; subject === "";) {
+					subject = prompt("put your subject in");
+				}
+			}
+
+			// prompt ends
+
+			//number grade to letter grade starts
+
+			//grade letter A+
+			setTimeout(function () {
+				document.getElementById("body").style.cursor = "auto";
+				document.getElementById("button").style.cursor = "pointer";
+				if (seventh >= 101) {
+					gardes.innerHTML = "You got an A+ in " + subject + ". Good job your in a HON's class.";
+				}
+
+				//grade letter A
+				else if (grade >= 94 || grade == 100) {
+					gardes.innerHTML = "You got an A in " + subject + ". Good job keep it up.";
+				}
+
+				//grade letter A-
+				else if (grade >= 90) {
+					gardes.innerHTML = "You got an A- in " + subject + ". Good job keep it up.";
+				}
+
+				//grade letter B+
+				else if (grade >= 87) {
+					gardes.innerHTML = "You got an B+ in " + subject + ". Try a little harder on the next assignment.";
+				}
+
+				//grade letter B
+				else if (grade >= 83) {
+					gardes.innerHTML = "You got an B in " + subject + ". Try a little harder on the next assignment.";
+				}
+
+				//grade letter B-
+				else if (grade >= 80) {
+					gardes.innerHTML = "You got an B- in " + subject + ". Try a little harder on the next assignment.";
+				}
+
+				//grade letter C+
+				else if (grade >= 77) {
+					gardes.innerHTML = "You got an C+ in " + subject + ". Try a little harder on the next assignment.";
+				}
+
+				//grade letter C
+				else if (grade >= 73) {
+					gardes.innerHTML = "You got an C in " + subject + ". Try a little harder on the next assignment.";
+				}
+
+				//grade letter C-
+				else if (grade >= 70) {
+					gardes.innerHTML = "You got an C- in " + subject + ". Try a little harder on the next assignment.";
+				}
+
+				//grade letter D+
+				else if (grade >= 67) {
+					gardes.innerHTML = "You got an D+ in " + subject + ". You are going to FAIL if you get a lower grade.";
+				}
+
+				//grade letter D
+				else if (grade >= 60) {
+					gardes.innerHTML = "You got an D in " + subject + ". You are going to FAIL if you get a lower grade.";
+				}
+
+				//grade letter F
+				else{
+					gardes.innerHTML = "You got an F in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
+				}
+			}, 3+seconds);
 		}
 	}
 
@@ -159,5 +258,4 @@ try {
     };
 } catch (err) {
 	alert(err.message+" it's on line "+ err.lineNumber);
-
 }
