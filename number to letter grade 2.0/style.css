@@ -2,11 +2,7 @@
     cursor: auto;
       
     }
-    #button{
-        display: none;
-    }
     body {
-        text-align: center;
         width: auto;
         height: auto;
     }
