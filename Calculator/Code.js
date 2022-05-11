@@ -34,8 +34,6 @@ function solve(val) {
         document.getElementById("result").value = "," + answer;
     }
 
-    document.getElementById("scans").innerHTML = "";
-
     if (input) {
         document.getElementById("result").value = answer; //outputs the answer
         document.getElementById("output").innerHTML += "</br>" + input + " = " + answer + "  ";
