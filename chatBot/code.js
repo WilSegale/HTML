@@ -91,6 +91,7 @@ function NeedHelp() {
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
+	
 	if (input.includes("hurt someone") ||
 		input.includes("cutting") ||
 		input.includes("die") ||

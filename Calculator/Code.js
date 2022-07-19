@@ -1,3 +1,4 @@
+console.clear(true)
 //output the users input
 function dis(val) {
     document.getElementById("result").value += val;
@@ -15,9 +16,10 @@ function keycode(event, val) {
     if (input && Key == Enter) {
         document.getElementById("output").innerHTML += "</br>" + input + " = " + answer + " ";
         user.value = answer;
+        
     } else if ((input && Key == C) || Key == c || (user && Key == C) || key == c) {
-        //if the user presses the C key it will clear the input feild
-        user.style.color = "whilte";
+        //if the user presses the C key it will clear the input felid
+        user.style.color = "white";
         setTimeout(function () {
             user.style.color = "black";
             user.value = "";
@@ -48,7 +50,7 @@ function clr() {
     document.getElementById("result").value = "";
 }
 
-//removes one number in the users inputbox
+//removes one number in the users input box
 function removeTextTag() {
     var string = document.getElementById("result").value;
     document.getElementById("result").value = string.substring(0, string.length - 1);

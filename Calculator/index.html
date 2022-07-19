@@ -5,7 +5,7 @@
       <script src="code.js"></script>
       <link rel="stylesheet" href="style.css"/>
    </head>
-   <body id="body" onload="Screens()" class="btn btn-primary btn-block" ondragstart="return false;" ondrop="return false;" oncopy="return true" oncut="return false" onpaste="return true"  oncontextmenu="return true;">
+   <body id="body" class="btn btn-primary btn-block" ondragstart="return false;" ondrop="return false;" oncopy="return true" oncut="return false" onpaste="return true"  oncontextmenu="return true;">
       <center>
          <table>
             <tr>
@@ -35,7 +35,7 @@
             <tr id="button">
                <td><input type="button"  value="." onclick="dis('.')"/></td>
                <td><input type="button"  value="0" onclick="dis('0')"/></td>
-               <td><input type="button"  value="=" onclick="solve()" /></td>
+               <td><input type="button" class="solve" value="=" onclick="solve()" /></td>
                <td><input type="button"  value="+" onclick="dis('+')"/></td>
             </tr>
          </table>

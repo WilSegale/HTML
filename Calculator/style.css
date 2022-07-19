@@ -49,7 +49,9 @@ input[type="text"] {
 
 
 /*the clear button*/
-
+.solve:hover{
+    background-color: lime;
+}
 .c:hover {
     background: red;
 }
