@@ -156,7 +156,7 @@ function Privacy() {
 		'The only time that this site will tell someone about how you are feeling is if you are thinking about harming yourself or someone else, </br>' +
 		'it will send you to someone who is trained to deal with what you are feeling.'
 
-	if (output.style.display === "block") {
+	if (output.style.display == "block") {
 		output.style.display = "none";
 	} else {
 		output.style.display = "block";
