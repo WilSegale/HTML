@@ -47,7 +47,6 @@ window.onload = clock;
 
 function keycode(event) {
 
-	var gardes = document.getElementById("answer");
 
 	var x = event.keyCode;
 	var seventh = document.getElementById("seventhNum").value;
@@ -80,6 +79,7 @@ function keycode(event) {
 
 		//grade letter A+
 		setTimeout(function () {
+			var gardes = document.getElementById("answer");
 			document.getElementById("body").style.cursor = 'auto';
 			document.getElementById("button").style.cursor = "pointer";
 			if (seventh >= 101) {
@@ -151,7 +151,7 @@ function grades() {
 	//if the input box doesn't have any value does it does nothing.
 	document.getElementById("body").style.cursor = 'progress';
 
-	var seventh = document.getElementById("seventhNum").value;
+	var seventh = document.getElementById("inputBox").value;
 	if (seventh === "") {
 		return;
 	}
