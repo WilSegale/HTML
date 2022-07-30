@@ -20,12 +20,34 @@ var x = setInterval(function () {
 	
 	// Output the result in an element with id="demo"
 	if(years === 0){
-	  	document.getElementById("countDown").innerHTML =  days + "d " + hours + "h " +  minutes + "m "  + seconds + "s";
+	  	document.getElementById("countDown").innerHTML =  days + "d " + 
+														  hours + "h " +  
+														  minutes + "m "  + 
+														  seconds + "s";
 	}
-	
-	else{
-	  document.getElementById("countDown").innerHTML = years + "y " +days + "d " + hours + "h " +  minutes + "m "  + seconds + "s";
+
+	else if(days === 0){
+		document.getElementById("countDown").innerHTML =
+														hours + "h " +  
+														minutes + "m "  + 
+														seconds + "s";
 	}
+
+	 else if(hours === 0){
+		document.getElementById("countDown").innerHTML =  
+													minutes + "m "  + 
+													seconds + "s";
+	}
+	else if(minutes === 0){
+		document.getElementById("countDown").innerHTML =  
+													seconds + "s";
+	}
+
+	else{document.getElementById("countDown").innerHTML = years + "y " +
+														  days + "d " +
+														  hours + "h " + 
+														  minutes + "m " +
+														  seconds + "s";}
 
 	// If the count down is over, write some text 
 	if (distance <= 0){

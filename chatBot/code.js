@@ -57,9 +57,6 @@ function info() {
 	info.innerHTML = "Hello, my name is Chatty The ChatBot." +
 		"I'm here to help you with your problems." +
 		"What are you struggling with?";
-	setTimeout(function () {
-		info.innerHTML = "";
-	}, 1 + seconds);
 }
 
 //if the enter key is pressed it makes the site work
