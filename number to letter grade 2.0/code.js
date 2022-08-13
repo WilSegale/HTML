@@ -112,7 +112,7 @@ function grades() {
 //Only numbers not letters in the text box
 document.onkeydown = function (lettersNo) {
 	if (lettersNo.ctrlKey && (lettersNo.keyCode == 67 || lettersNo.keyCode == 86 || lettersNo.keyCode == 85 || lettersNo.keyCode == 117)) { //Alt+c, Alt+v will alSo be disabled sadly.
-	  return;
+		return;
 	}
 	var code = (lettersNo.which) ? lettersNo.which : lettersNo.keyCode;
 	if (code > 31 && (code < 48 || code > 57)) {lettersNo.preventDefault();}
