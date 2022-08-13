@@ -1,0 +1,10 @@
+.centerTitle {
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 3rem;
+}
+
+#today {
+    font-size: 50px;
+}

@@ -47,13 +47,13 @@ function grades() {
 	document.getElementById("body").style.cursor = 'progress';
 
 	var grade = document.getElementById("inputBox").value;
-	if (grade === "") {
-		return;
+	if (grade == "") {
+		return false;
 	}
 
 	var grades = document.getElementById("answer");
 	//if the prompt has any numbers or doesn't have any input it shows an error message.
-	var subject = prompt("put your subject in");
+	var subject = prompt("Put your subject in.");
 	if (subject >= 0) {
 		alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
 		return;
@@ -72,40 +72,40 @@ function grades() {
 		document.getElementById("body").style.cursor = 'auto';
 		document.getElementById("button").style.cursor = "pointer";
 		//grade letter A+
-		if (grade >= 101) {grades.innerHTML = "You got an " + " A+ " + " in " + subject + ". Good job your in a HON's class.";}
+		if (grade >= 101) {grades.innerHTML = "You got an A+ in " + subject + ". Good job your in a HON's class.";}
 
 		//grade letter A
-		else if (grade >= 94 || grade == 100) {grades.innerHTML = "You got an " + " A " + " in " + subject + ". Good job keep it up.";}
+		else if (grade >= 94 || grade == 100) {grades.innerHTML = "You got an A in " + subject + ". Good job keep it up.";}
 
 		//grade letter A-
-		else if (grade >= 90) {grades.innerHTML = "You got an " + " A- " + " in " + subject + ". Good job keep it up.";}
+		else if (grade >= 90) {grades.innerHTML = "You got an A- in " + subject + ". Good job keep it up.";}
 
 		//grade letter B+
-		else if (grade >= 87) {grades.innerHTML = "You got an " + " B+ " + " in " + subject + ". Try a little harder on the next assignment.";}
+		else if (grade >= 87) {grades.innerHTML = "You got an B+ in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter B
-		else if (grade >= 83) {grades.innerHTML = "You got an " + " B " + " in " + subject + ". Try a little harder on the next assignment.";}
+		else if (grade >= 83) {grades.innerHTML = "You got an B in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter B-
-		else if (grade >= 80) {grades.innerHTML = "You got an " + " B- " + " in " + subject + ". Try a little harder on the next assignment.";}
+		else if (grade >= 80) {grades.innerHTML = "You got an B- in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter C+
-		else if (grade >= 77) {grades.innerHTML = "You got an " + " C+ " + " in " + subject + ". Try a little harder on the next assignment.";}
+		else if (grade >= 77) {grades.innerHTML = "You got an C+ in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter C
-		else if (grade >= 73) {grades.innerHTML = "You got an " + " C " + " in " + subject + ". Try a little harder on the next assignment.";}
+		else if (grade >= 73) {grades.innerHTML = "You got an C in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter C-
-		else if (grade >= 70) {grades.innerHTML = "You got an " + " C- " + " in " + subject + ". Try a little harder on the next assignment.";}
+		else if (grade >= 70) {grades.innerHTML = "You got an C- in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter D+
-		else if (grade >= 67) {grades.innerHTML = "You got an " + " D+ " + " in " + subject + ". You are going to FAIL if you get a lower grade.";}
+		else if (grade >= 67) {grades.innerHTML = "You got an D+ in " + subject + ". You are going to FAIL if you get a lower grade.";}
 
 		//grade letter D
-		else if (grade >= 60) {grades.innerHTML = "You got an " + " D " + " in " + subject + ". You are going to FAIL if you get a lower grade.";}
+		else if (grade >= 60) {grades.innerHTML = "You got an D in " + subject + ". You are going to FAIL if you get a lower grade.";}
 
 		//grade letter F
-		else if (grade <= 59) {grades.innerHTML = "You got an " + " F " + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";}
+		else if (grade <= 59) {grades.innerHTML = "You got an F in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";}
 	}, 3000);
 }
 

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+   <head>
+      <script src="code.js" ></script>
+      <link rel="stylesheet" href="style.css">
+      <title>letter to number grade</title>
+   </head>
+   <b>
+      <span id="hr" x1="70" y1="70" x2="70" y2="38">00</span>
+      <span>:</span>
+      <span id="min" x1="70" y1="70" x2="70" y2="20" >00</span>
+      <span>:</span>
+      <span id="sec" x1="70" y1="70" x2="70" y2="12">00</span>
+      <span id="suffix">--</span>
+      <p id="message"></p>
+   </b>
+   <center>
+      <p id="today" class="today"  onclick="newPage()">
+         <script>
+            var today = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            var today = weekday[today.getDay()];
+            if(today){
+               document.getElementById("today").innerHTML = "Today is " + today;
+            }
+         </script>
+      </p>
+      <!-- Top Section, holds logo and title -->
+      <div class="centerTitle">Number grade to letter grade.</div>
+      <!-- Clear the float -->
+      <div class="clearEm"></div>
+      <!-- Middle section, contains menu, boxes, and lists -->
+      <br>
+      <input type="textbox" id="inputBox" required><input type="button" id="button" value="convert" onclick="grades()" required>
+      <div id="inputBox"></div>
+      <div id="answer"></div>
+   </center>
+   </body>
+</html>
