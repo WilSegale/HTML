@@ -35,130 +35,26 @@ function setText(id, val) {
 	document.getElementById(id).innerHTML = val;
 }
 
-//showes the clock time.
+//shows the clock time.
 window.onload = clock;
 
 
-
-/**/
 //Covert number grade to letter grade
-
-// Cancel the default action, if needed
-
-function keycode(event) {
-
-
-	var x = event.keyCode;
-	var seventh = document.getElementById("seventhNum").value;
-
-	if (seventh && x == 13) {
-		//if the input box doesn't have any value does it does nothing.
-
-		document.getElementById("body").style.cursor = 'progress';
-		if (seventh === "") {
-			return;
-		}
-
-		//if the prompt has any numbers or doesn't have any input it shows an error message.
-		var subject = prompt("Put your subject in");
-		if (subject >= 0) {
-			alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
-			return;
-		}
-
-		//if the user does not input anything it continuously says 'put your subject in.'
-		else if (subject === "") {
-			for (subject; subject === "";) {
-				subject = prompt("put your subject in");
-			}
-		}
-
-		// prompt ends
-
-		//number grade to letter grade starts
-
-		//grade letter A+
-		setTimeout(function () {
-			var grades = document.getElementById("answer");
-			document.getElementById("body").style.cursor = 'auto';
-			document.getElementById("button").style.cursor = "pointer";
-			if (seventh >= 101) {
-				grades.innerHTML = "You got an " + " A+ " + " in " + subject + ". Good job your in a HON's class.";
-			}
-
-			//grade letter A
-			else if (seventh >= 94 || seventh == 100) {
-				grades.innerHTML = "You got an " + " A " + " in " + subject + ". Good job keep it up.";
-			}
-
-			//grade letter A-
-			else if (seventh >= 90) {
-				grades.innerHTML = "You got an " + " A- " + " in " + subject + ". Good job keep it up.";
-			}
-
-			//grade letter B+
-			else if (seventh >= 87) {
-				grades.innerHTML = "You got an " + " B+ " + " in " + subject + ". Try a little harder on the next assignment.";
-			}
-
-			//grade letter B
-			else if (seventh >= 83) {
-				grades.innerHTML = "You got an " + " B " + " in " + subject + ". Try a little harder on the next assignment.";
-			}
-
-			//grade letter B-
-			else if (seventh >= 80) {
-				grades.innerHTML = "You got an " + " B- " + " in " + subject + ". Try a little harder on the next assignment.";
-			}
-
-			//grade letter C+
-			else if (seventh >= 77) {
-				grades.innerHTML = "You got an " + " C+ " + " in " + subject + ". Try a little harder on the next assignment.";
-			}
-
-			//grade letter C
-			else if (seventh >= 73) {
-				grades.innerHTML = "You got an " + " C " + " in " + subject + ". Try a little harder on the next assignment.";
-			}
-
-			//grade letter C-
-			else if (seventh >= 70) {
-				grades.innerHTML = "You got an " + " C- " + " in " + subject + ". Try a little harder on the next assignment.";
-			}
-
-			//grade letter D+
-			else if (seventh >= 67) {
-				grades.innerHTML = "You got an " + " D+ " + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-			}
-
-			//grade letter D
-			else if (seventh >= 60) {
-				grades.innerHTML = "You got an " + " D " + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-			}
-
-			//grade letter F
-			else if (seventh <= 59) {
-				grades.innerHTML = "You got an " + " F " + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
-			}
-
-		}, 3000);
-	}
-
-}
 
 function grades() {
 
 	//if the input box doesn't have any value does it does nothing.
 	document.getElementById("body").style.cursor = 'progress';
 
-	var seventh = document.getElementById("inputBox").value;
-	if (seventh === "") {
+	var grade = document.getElementById("inputBox").value;
+	if (grade === "") {
 		return;
 	}
+
 	var grades = document.getElementById("answer");
 	//if the prompt has any numbers or doesn't have any input it shows an error message.
 	var subject = prompt("put your subject in");
-	if (subject > 0) {
+	if (subject >= 0) {
 		alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
 		return;
 	}
@@ -176,74 +72,48 @@ function grades() {
 		document.getElementById("body").style.cursor = 'auto';
 		document.getElementById("button").style.cursor = "pointer";
 		//grade letter A+
-		if (seventh >= 101) {
-			grades.innerHTML = "You got an " + " A+ " + " in " + subject + ". Good job your in a HON's class.";
-		}
+		if (grade >= 101) {grades.innerHTML = "You got an " + " A+ " + " in " + subject + ". Good job your in a HON's class.";}
 
 		//grade letter A
-		else if (seventh >= 94 || seventh == 100) {
-			grades.innerHTML = "You got an " + " A " + " in " + subject + ". Good job keep it up.";
-		}
+		else if (grade >= 94 || grade == 100) {grades.innerHTML = "You got an " + " A " + " in " + subject + ". Good job keep it up.";}
 
 		//grade letter A-
-		else if (seventh >= 90) {
-			grades.innerHTML = "You got an " + " A- " + " in " + subject + ". Good job keep it up.";
-		}
+		else if (grade >= 90) {grades.innerHTML = "You got an " + " A- " + " in " + subject + ". Good job keep it up.";}
 
 		//grade letter B+
-		else if (seventh >= 87) {
-			grades.innerHTML = "You got an " + " B+ " + " in " + subject + ". Try a little harder on the next assignment.";
-		}
+		else if (grade >= 87) {grades.innerHTML = "You got an " + " B+ " + " in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter B
-		else if (seventh >= 83) {
-			grades.innerHTML = "You got an " + " B " + " in " + subject + ". Try a little harder on the next assignment.";
-		}
+		else if (grade >= 83) {grades.innerHTML = "You got an " + " B " + " in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter B-
-		else if (seventh >= 80) {
-			grades.innerHTML = "You got an " + " B- " + " in " + subject + ". Try a little harder on the next assignment.";
-		}
+		else if (grade >= 80) {grades.innerHTML = "You got an " + " B- " + " in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter C+
-		else if (seventh >= 77) {
-			grades.innerHTML = "You got an " + " C+ " + " in " + subject + ". Try a little harder on the next assignment.";
-		}
+		else if (grade >= 77) {grades.innerHTML = "You got an " + " C+ " + " in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter C
-		else if (seventh >= 73) {
-			grades.innerHTML = "You got an " + " C " + " in " + subject + ". Try a little harder on the next assignment.";
-		}
+		else if (grade >= 73) {grades.innerHTML = "You got an " + " C " + " in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter C-
-		else if (seventh >= 70) {
-			grades.innerHTML = "You got an " + " C- " + " in " + subject + ". Try a little harder on the next assignment.";
-		}
+		else if (grade >= 70) {grades.innerHTML = "You got an " + " C- " + " in " + subject + ". Try a little harder on the next assignment.";}
 
 		//grade letter D+
-		else if (seventh >= 67) {
-			grades.innerHTML = "You got an " + " D+ " + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-		}
+		else if (grade >= 67) {grades.innerHTML = "You got an " + " D+ " + " in " + subject + ". You are going to FAIL if you get a lower grade.";}
 
 		//grade letter D
-		else if (seventh >= 60) {
-			grades.innerHTML = "You got an " + " D " + " in " + subject + ". You are going to FAIL if you get a lower grade.";
-		}
+		else if (grade >= 60) {grades.innerHTML = "You got an " + " D " + " in " + subject + ". You are going to FAIL if you get a lower grade.";}
 
 		//grade letter F
-		else if (seventh <= 59) {
-			grades.innerHTML = "You got an " + " F " + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";
-		}
+		else if (grade <= 59) {grades.innerHTML = "You got an " + " F " + " in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";}
 	}, 3000);
 }
 
-//Only nummbers not letters in the text box
+//Only numbers not letters in the text box
 document.onkeydown = function (lettersNo) {
 	if (lettersNo.ctrlKey && (lettersNo.keyCode == 67 || lettersNo.keyCode == 86 || lettersNo.keyCode == 85 || lettersNo.keyCode == 117)) { //Alt+c, Alt+v will alSo be disabled sadly.
 	  return;
 	}
 	var code = (lettersNo.which) ? lettersNo.which : lettersNo.keyCode;
-	if (code > 31 && (code < 48 || code > 57)) {
-		lettersNo.preventDefault();
-	}
+	if (code > 31 && (code < 48 || code > 57)) {lettersNo.preventDefault();}
 };
