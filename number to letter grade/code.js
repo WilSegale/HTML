@@ -9,15 +9,11 @@ function clock() {
 	m = d.getMinutes();
 	s = d.getSeconds();
 
-	if (h >= 12) {
-		setText('suffix', 'PM');
-	} else {
-		setText('suffix', 'AM');
-	}
+	if (h >= 12) {setText('suffix', 'PM');} 
+	
+	else {setText('suffix', 'AM');}
 
-	if (h != 12) {
-		h %= 12;
-	}
+	if (h != 12) {h %= 12;}
 
 	setText('sec', s);
 	setText('min', m);
@@ -29,9 +25,8 @@ function clock() {
 
 //sets the time.
 function setText(id, val) {
-	if (val < 10) {
-		val = '0' + val;
-	}
+	if (val < 10) {val = '0' + val;}
+
 	document.getElementById(id).innerHTML = val;
 }
 
@@ -47,23 +42,19 @@ function grades() {
 	document.getElementById("body").style.cursor = 'progress';
 
 	var grade = document.getElementById("inputBox").value;
-	if (grade == "") {
-		return false;
-	}
+	if (grade == "") {return false;}
 
 	var grades = document.getElementById("answer");
 	//if the prompt has any numbers or doesn't have any input it shows an error message.
 	var subject = prompt("Put your subject in.");
 	if (subject >= 0) {
 		alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
-		return;
+		return true;
 	}
 
 	//if the user does not input anything it continuously says 'put your subject in.'
-	else if (subject === "") {
-		for (subject; subject === "";) {
-			subject = prompt("put your subject in");
-		}
+	else if(subject === "") {
+		for(subject; subject === "";) {subject = prompt("Put your subject in");}
 	}
 	// prompt ends
 
