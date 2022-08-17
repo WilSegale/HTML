@@ -26,12 +26,12 @@ function calculateTip() {
 	}
 
 	//Check to see if this input is empty or less than or equal to 1
-	if (numOfPeople === "" || numOfPeople <= 1) {
-		document.getElementById("each").style.display = "none";
-		document.getElementById("input").innerHTML = user + " You would need to tip that person " + " ";
-
-	} else {
-		document.getElementById("input").innerHTML = user + " You would each need to tip that person " + " ";
+  if(user=="") {
+		document.getElementById("input").innerHTML = "You would each need to tip that person " + " ";
+		document.getElementById("each").style.display = "block";
+	}
+	else{
+		document.getElementById("input").innerHTML = user+ " you would each need to tip that person " + " ";
 		document.getElementById("each").style.display = "block";
 	}
 
