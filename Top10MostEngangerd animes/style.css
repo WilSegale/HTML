@@ -3,26 +3,14 @@ html{
 	width:auto;
 }
 
-body{
-	text-transform: uppercase;
-}
+body{text-transform: uppercase;}
 
-h1{
-	font-weight: bold;
-}
+h1{font-weight: bold;}
 
-span{
-	text-decoration: underline;
-}
+span{text-decoration: underline;}
 
-.groceries {	 
-	list-style: none;
-}
+.groceries {list-style: none;}
 
-.li{
-    display:none;  
-}
+.li{display:none;}
 
-#li2{
-	text-align: left;
-}
+#li2{text-align: left;}

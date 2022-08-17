@@ -115,8 +115,8 @@ function output() {
 		output.style.cursor = "auto";
 		for (var i = 0; i < Help.length; i++) {
 			output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-				Help[HelpUser] + "This website might help you. " +
-				HelpLinks[links];
+			Help[HelpUser] + "This website might help you. " +
+			HelpLinks[links];
 		}
 	}, 3 + seconds);
 }
@@ -135,8 +135,8 @@ function NeedHelp() {
 		for (var i = 0; i < Help.length; i++) {
 			if (output) {
 				output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-					Help[HelpUser] + "This website might help you. " +
-					HelpLinks[links];
+				Help[HelpUser] + "This website might help you. " +
+				HelpLinks[links];
 			}
 		}
 	}, 3 + seconds);

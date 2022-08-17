@@ -6,7 +6,7 @@ var x = setInterval(function () {
   	var d = new Date();
   	var n = d.getFullYear();
 	// Set the date we're counting down to
-	var countDownDate = new Date("10/2/"+n).getTime();
+	var countDownDate = new Date("10/02/"+n).getTime();
 	var todaysDate = new Date().getTime();
 	var distance = countDownDate - todaysDate+1;
 
@@ -20,33 +20,30 @@ var x = setInterval(function () {
 	
 	// Output the result in an element with id="demo"
 	if(years === 0){
-	  	document.getElementById("countDown").innerHTML =  days + "d " + 
-														  hours + "h " +  
-														  minutes + "m "  + 
+	  	document.getElementById("countDown").innerHTML =  days + "d - " + 
+														  hours + "h - " +  
+														  minutes + "m - "  + 
 														  seconds + "s";
 	}
 
 	else if(days === 0){
-		document.getElementById("countDown").innerHTML =
-														hours + "h " +  
-														minutes + "m "  + 
-														seconds + "s";
+		document.getElementById("countDown").innerHTML =  hours + "h - " +  
+														  minutes + "m - "  + 
+														  seconds + "s";
 	}
 
 	 else if(hours === 0){
-		document.getElementById("countDown").innerHTML =  
-													minutes + "m "  + 
-													seconds + "s";
+		document.getElementById("countDown").innerHTML =  minutes + "m - "  + 
+														  seconds + "s";
 	}
 	else if(minutes === 0){
-		document.getElementById("countDown").innerHTML =  
-													seconds + "s";
+		document.getElementById("countDown").innerHTML =  seconds + "s";
 	}
 
-	else{document.getElementById("countDown").innerHTML = years + "y " +
-														  days + "d " +
-														  hours + "h " + 
-														  minutes + "m " +
+	else{document.getElementById("countDown").innerHTML = years + "y - " +
+														  days + "d - " +
+														  hours + "h - " + 
+														  minutes + "m - " +
 														  seconds + "s";}
 
 	// If the count down is over, write some text 

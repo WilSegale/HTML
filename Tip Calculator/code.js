@@ -11,7 +11,7 @@ function calculateTip() {
 		return;
 	}
 
-	//if the user dosent Choose an option.
+	//if the user donset Choose an option.
 	if (select === false) {
 		alert("You need to Choose an option");
 		return false;
