@@ -23,6 +23,6 @@ let Answer = [
 
 function output(){
 	var output = Math.floor(Math.random() * Answer.length);
-
+	document.getElementById("input").value="";
 	document.getElementById('output').innerText = Answer[output];
 }
