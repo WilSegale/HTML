@@ -1,7 +1,8 @@
+let enter = 13;
 //list of quotes for the users to read
-var seconds = "0000"
+let seconds = "0000"
 
-var problems = [
+let problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
 	"You're allowed to scream, You're allowed to cry, but not to give up.",
@@ -30,7 +31,7 @@ var problems = [
 ];
 
 //the name of the program that will help the user
-var Help = [
+let Help = [
 	"American Foundation for Suicide Prevention (AFSP)",
 	"National Institute of Mental Health (NIMH)", "Society for the Prevention of Teen Suicide (SPTS)",
 	"Centers for Disease Control and Prevention (CDC)", "Action Alliance for Suicide Prevention",
@@ -38,7 +39,7 @@ var Help = [
 ];
 
 //This will give the users a link to click if they want to get help
-var HelpLinks = [
+let HelpLinks = [
 	'<a href="https://afsp.org/find-support/resources/">find-support resources</a>',
 	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">suicide-prevention</a>',
 	'<a href="https://www.sptsusa.org/">sptsusa.org</a>',
@@ -55,8 +56,8 @@ var HelpLinks = [
 function info() {
 	var info = document.getElementById("info");
 	info.innerHTML = "Hello, my name is Chatty The ChatBot." +
-		"I'm here to help you with your problems." +
-		"What are you struggling with?";
+		" I'm here to help you with your problems." +
+		" What are you struggling with?";
 }
 
 //if the enter key is pressed it makes the site work
@@ -66,12 +67,16 @@ function Enter(event) {
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
-	if (input.includes("hurt someone") && EnterKey == 13 ||
-		input.includes("cutting") && EnterKey == 13 ||
-		input.includes("die") && EnterKey == 13 ||
-		input.includes("alive") && EnterKey == 13) {
+	if (input.includes("hurt someone") && EnterKey == enter ||
+		input.includes("cutting") && EnterKey == enter ||
+		input.includes("die") && EnterKey == enter ||
+		input.includes("alive") && EnterKey == enter) {
 		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
-	} else {
+	} 
+	else if(input == "help" && EnterKey == enter){
+		output.innerHTML="input how you are feeling and I will help you the best I can."
+	}
+	else {
 		for (var i = 0; i < problems.length; i++) {
 			if (input && EnterKey == 13) {
 				userInput.value = "";
@@ -94,7 +99,12 @@ function NeedHelp() {
 		input.includes("die") ||
 		input.includes("alive")) {
 		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
-	} else {
+	} 
+	else if(input == "help" && EnterKey == enter){
+		output.innerHTML="input how you are feeling and I will help you the best I can."
+	}
+	
+	else {
 		for (var i = 0; i < problems.length; i++) {
 			if (input) {
 				userInput.value = "";
