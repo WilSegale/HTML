@@ -22,7 +22,10 @@ let Answer = [
 ];
 
 function output(){
-	var output = Math.floor(Math.random() * Answer.length);
-	document.getElementById("input").value="";
-	document.getElementById('output').innerText = Answer[output];
+	var Input = document.getElementById("input")//user input
+	var Output = document.getElementById('output')//the output of the users input
+	var output = Math.floor(Math.random() * Answer.length);//randomly chosses something form the Answers array
+	
+	Input.value="";//clears the input box when the users input something and clicks the img
+	Output.innerText = Answer[output];//output the 
 }
