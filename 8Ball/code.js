@@ -22,6 +22,7 @@ let Answer = [
 ];
 
 function output(){
+	
 	var Input = document.getElementById("input")//user input
 	var Output = document.getElementById('output')//the output of the users input
 	var output = Math.floor(Math.random() * Answer.length);//randomly chosses something form the Answers array
