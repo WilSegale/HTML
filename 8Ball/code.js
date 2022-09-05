@@ -22,8 +22,10 @@ let Answer = [
 ];
 
 function output(){
+	var Input = document.getElementById("input")//user input
 	var Output = document.getElementById('output')//the output of the users input
 	var output = Math.floor(Math.random() * Answer.length);//randomly chosses something form the Answers array
 	Output.innerText = Answer[output];//output the answer
+	Input.value="";//clears the user input when they click the 8Ball
 
 }
