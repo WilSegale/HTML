@@ -94,7 +94,7 @@ function clock() {
 	//grade letter F
 	else if (grade <= 59) {grades.innerText = "You got an F in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";}
  }
- 
+ alert (userInput)
  //Only numbers not letters in the text box
  document.onkeydown = function (lettersNo) {
 	if (lettersNo.ctrlKey && (lettersNo.keyCode == 67 || lettersNo.keyCode == 86 || lettersNo.keyCode == 85 || lettersNo.keyCode == 117)) { //Alt+c, Alt+v will alSo be disabled sadly.
