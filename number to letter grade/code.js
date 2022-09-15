@@ -1,4 +1,4 @@
-//main function for the clock.
+ //main function for the clock.
 function clock() {
 	//calculate angle
 	var d, h, m, s;
