@@ -2,7 +2,7 @@ let enter = 13;
 //list of quotes for the users to read
 let seconds = "0000"
 
-let problems = [
+var problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
 	"You're allowed to scream, You're allowed to cry, but not to give up.",
@@ -31,7 +31,7 @@ let problems = [
 ];
 
 //the name of the program that will help the user
-let Help = [
+var Help = [
 	"American Foundation for Suicide Prevention (AFSP)",
 	"National Institute of Mental Health (NIMH)", "Society for the Prevention of Teen Suicide (SPTS)",
 	"Centers for Disease Control and Prevention (CDC)", "Action Alliance for Suicide Prevention",
@@ -39,7 +39,7 @@ let Help = [
 ];
 
 //This will give the users a link to click if they want to get help
-let HelpLinks = [
+var HelpLinks = [
 	'<a href="https://afsp.org/find-support/resources/">find-support resources</a>',
 	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">suicide-prevention</a>',
 	'<a href="https://www.sptsusa.org/">sptsusa.org</a>',
