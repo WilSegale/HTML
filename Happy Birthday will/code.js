@@ -5,7 +5,7 @@ var x = setInterval(function () {
   	var d = new Date()
   	var n = d.getFullYear()
 	// Set the date we're counting down to
-	var countDownDate = new Date("10/02/"+n).getTime();
+	var countDownDate = new Date("10/02/"+1).getTime();
 	var todaysDate = new Date().getTime();
 	var distance = countDownDate - todaysDate+1;
 
