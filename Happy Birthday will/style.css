@@ -1,38 +1,8 @@
-body,html {
-	height: 100%;
-	margin: 0;
-	-webkit-touch-callout: none;
-	/* iOS Safari */
-	-webkit-user-select: none;
-	/* Safari */
-	-khtml-user-select: none;
-	/* Konqueror HTML */
-	-moz-user-select: none;
-	/* Firefox */
-	-ms-user-select: none;
-	/* Internet Explorer/Edge */
-	user-select: none;
-	/* Non-prefixed version, currently*/
-	text-align: center;
-
+#timer {
+    display: flex;
+    justify-content: space-between;
 }
-
-#bgimg {
-	background-image: url('forestbridge.jpg');
-	height: 100%;
-	background-position: center;
-	background-size: cover;
-	position: relative;
-	color: white;
-	font-family: Courier, block;
-	cursor: auto;
-	font-size: 25px;
-}
-
-.middle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
+#timer div {
+    width: 25%;
+    text-align: center;
 }
