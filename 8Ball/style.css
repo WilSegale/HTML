@@ -11,7 +11,7 @@ img{
   width:50px;
 }
 
-img:hover {
+img:active {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 1s;
 }
