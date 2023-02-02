@@ -67,6 +67,7 @@ function Enter(event) {
 	var userInput = document.getElementById("input");
 	var output = document.getElementById("output");
 	var outputProblems = Math.floor((Math.random() * problems.length));
+	
 	if (input.includes("hurt someone") && EnterKey == enter ||
 		input.includes("cutting") && EnterKey == enter ||
 		input.includes("die") && EnterKey == enter ||

@@ -107,6 +107,10 @@ window.onload = function () {
 
 		if (counter + space === geusses.length) {
 			document.getElementById("mylives").innerHTML = "You Win!";
+			delete alphabet;
+
+
+
 		}
 	};
 
@@ -237,7 +241,7 @@ window.onload = function () {
 		console.log(word);
 		buttons();
 		geusses = [];
-		lives = 10;
+		lives = 100;
 		counter = 0;
 		space = 0;
 		result();
