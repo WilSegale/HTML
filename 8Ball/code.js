@@ -19,12 +19,23 @@ var Answer = [
 	"My sources say no",
 	"Outlook not so good",
 	"Very doubtful"
-];
-
-function output(){
-	var Input = document.getElementById("input")//user input
-	var Output = document.getElementById('output')//the output of the users input
-	var output = Math.floor(Math.random() * Answer.length);//randomly chosses something form the Answers array
-	Output.innerText = Answer[output];//output the answer
-	Input.value="";//clears the user input when they click the 8Ball
-}
+  ];
+  
+  function output() {
+	var Input = document.getElementById("input") //user input
+	var Output = document.getElementById('output') //the output of the users input
+	var output = Math.floor(Math.random() * Answer.length); //randomly chosses something form the Answers array
+	// if the user input help it tells them how to use the programe
+	if (Input.value == "help") {
+		Output.innerText = 'input something in the input feild and it will output a answer'
+	}
+	//if the input value has nothing in it it say for them to input somthing in it
+	else if (Input.value == "") {
+		Output.innerText = "Plases input something in the text box"
+	}
+	//output a answer of the users input
+	else {
+		Output.innerText = Answer[output]; //output the answer
+		Input.value = ""; //clears the user input when they click the 8Ball
+	}
+  }
