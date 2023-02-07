@@ -241,7 +241,7 @@ window.onload = function () {
 		console.log(word);
 		buttons();
 		geusses = [];
-		lives = 100;
+		lives = 10;
 		counter = 0;
 		space = 0;
 		result();
