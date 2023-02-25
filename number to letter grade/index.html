@@ -1,22 +1,30 @@
+<!-- This is an HTML file -->
 <!doctype html>
 <html>
    <head>
+      <!-- Include external JavaScript file -->
       <script src="code.js" ></script>
+      <!-- Include external CSS file -->
       <link rel="stylesheet" href="style.css">
+      <!-- Set title of the page -->
       <title>letter to number grade</title>
    </head>
    <b>
+      <!-- Create a clock with hours, minutes, seconds and suffix -->
       <span id="hr" x1="70" y1="70" x2="70" y2="38">00</span>
       <span>:</span>
       <span id="min" x1="70" y1="70" x2="70" y2="20" >00</span>
       <span>:</span>
       <span id="sec" x1="70" y1="70" x2="70" y2="12">00</span>
       <span id="suffix">--</span>
+      <!-- Display messages for the user -->
       <p id="message"></p>
    </b>
    <div id="Center">
+      <!-- Display today's date -->
       <p id="today" class="today"  onclick="newPage()">
          <script>
+            // Get today's date and convert it to a weekday name
             var today = new Date();
             var weekday = new Array(7);
             weekday[0] = "Sunday";
@@ -27,6 +35,7 @@
             weekday[5] = "Friday";
             weekday[6] = "Saturday";
             var today = weekday[today.getDay()];
+            // If today's weekday is found, display it in the "today" element
             if(today){
                document.getElementById("today").innerHTML = "Today is " + today;
             }
@@ -38,9 +47,12 @@
       <div class="clearEm"></div>
       <!-- Middle section, contains menu, boxes, and lists -->
       <br>
+      <!-- Create an input box and a button to convert the grade -->
       <input type="textbox" id="inputBox" required><input type="button" id="button" value="convert" onclick="grades()" required>
+      <!-- Create a div to hold the input box and a div to hold the converted grade -->
       <div id="inputBox"></div>
       <div id="answer"></div>
    </div>
+   <!-- Close the body section -->
    </body>
 </html>
