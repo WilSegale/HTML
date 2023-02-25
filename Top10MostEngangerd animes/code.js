@@ -3,8 +3,6 @@ function next(){
 	window.open(link)
 }
 
-alert("plz share, comment and try to help our Endangered Animals thank you 🙏");
-
 /*<![CDATA[*/
 function initializeGoogleTranslateElement() {
 	new google.translate.TranslateElement({
