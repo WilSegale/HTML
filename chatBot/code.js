@@ -30,26 +30,18 @@ var problems = [
 	"Sometimes you have to give up on people, not because you don't care but because they don't"
 ];
 
-//the name of the program that will help the user
-var Help = [
-	"American Foundation for Suicide Prevention (AFSP)",
-	"National Institute of Mental Health (NIMH)", "Society for the Prevention of Teen Suicide (SPTS)",
-	"Centers for Disease Control and Prevention (CDC)", "Action Alliance for Suicide Prevention",
-	"Suicide Prevention Resource Center (SPRC)", "Crisis Text Line", "#Bethe1to", " Suicide Awareness Voices of Education (SAVE)", "The Trevor Project"
-];
-
 //This will give the users a link to click if they want to get help
 var HelpLinks = [
-	'<a href="https://afsp.org/find-support/resources/">find-support resources</a>',
-	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">suicide-prevention</a>',
-	'<a href="https://www.sptsusa.org/">sptsusa.org</a>',
-	'<a href="https://www.cdc.gov/violenceprevention/suicide/resources.html">violenceprevention suicide pervention</a>',
-	'<a href="https://actionallianceforsuicideprevention.org/resourcesl">actionalliance for suicide prevention</a>',
-	'<a href="https://www.sprc.org/">sprc</a>',
-	'<a href="https://www.crisistextline.org/">crisistextline</a>',
-	'<a href="https://www.bethe1to.com/">bethe1to1</a>',
-	'<a href="https://save.org/">save.org</a>',
-	'<a href="https://thetrevorproject.org/">the trevor project</a>'
+	'<a href="https://afsp.org/find-support/resources/">American Foundation for Suicide Prevention (AFSP)</a>',
+	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">National Institute of Mental Health (NIMH)</a>',
+	'<a href="https://www.sptsusa.org/">Society for the Prevention of Teen Suicide (SPTS)</a>',
+	'<a href="https://www.cdc.gov/violenceprevention/suicide/resources.html">Centers for Disease Control and Prevention (CDC)</a>',
+	'<a href="https://actionallianceforsuicideprevention.org/resourcesl">Action Alliance for Suicide Prevention</a>',
+	'<a href="https://www.sprc.org/">Suicide Prevention Resource Center (SPRC)</a>',
+	'<a href="https://www.crisistextline.org/">Crisis Text Line</a>',
+	'<a href="https://www.bethe1to.com/">Bethe1to</a>',
+	'<a href="https://save.org/">Suicide Awareness Voices of Education (SAVE)</a>',
+	'<a href="https://thetrevorproject.org/">The Trevor Project</a>'
 ];
 
 //tell the users how to program works
@@ -166,7 +158,8 @@ function Privacy() {
 
 	if (output.style.display == "block") {
 		output.style.display = "none";
-	} else {
+	} 
+	else {
 		output.style.display = "block";
 	}
 }
