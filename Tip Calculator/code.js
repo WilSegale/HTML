@@ -21,17 +21,21 @@ function calculateTip() {
 	if (user === null) {
 		for (var i = 0; i < user; i++) {
 			alert(user);
+			return;
 		}
-		return;
 	}
 
 	//Check to see if this input is empty or less than or equal to 1
-  if(user=="") {
-		document.getElementById("input").innerHTML = "You would each need to tip that person " + " ";
+  if(user == "") {
+		document.getElementById("input").innerHTML = "You would each need to tip that person.";
+		document.getElementById("each").style.display = "block";
+	}
+	else if (user == 1) {
+		document.getElementById("input").innerHTML = "You would need to tip that person.";
 		document.getElementById("each").style.display = "block";
 	}
 	else{
-		document.getElementById("input").innerHTML = user+ " you would each need to tip that person " + " ";
+		document.getElementById("input").innerHTML = user+ " you would each need to tip that person.";
 		document.getElementById("each").style.display = "block";
 	}
 
@@ -44,7 +48,6 @@ function calculateTip() {
 	//Display the tip
 	document.getElementById("totalTip").style.display = "block";
 	document.getElementById("tip").innerHTML = total;
-
 }
 
 //Hide the tip amount on load
