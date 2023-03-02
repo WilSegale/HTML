@@ -1,7 +1,4 @@
-function next(){
-	var link ="https://code.sololearn.com/WW3Dr6bomDIA/#html"
-	window.open(link)
-}
+
 
 /*<![CDATA[*/
 function initializeGoogleTranslateElement() {
