@@ -1,12 +1,14 @@
-/*resizes the robot img */
+/*makes everything centered*/
 #body{
   text-align:center;
 }
 
+/* changes the size of the input box*/
 #input{
   width: 12%;
 }
 
+/*resizes the robot img */
 img{
   width:50px;
 }
@@ -14,4 +16,9 @@ img{
 /*if the user hovers over the Privacy link it makes it bigger. So if the user has bad eyes they can read it better*/
 .Privacy:hover{
   text-align: right;
+}
+
+/* changes the size of the privacy statement*/
+#Privacy:hover{
+  text-size-adjust: 10px;
 }
