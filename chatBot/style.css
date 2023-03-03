@@ -20,5 +20,5 @@ img{
 
 /* changes the size of the privacy statement*/
 #Privacy:hover{
-  text-size-adjust: 10px;
+  font: optional;
 }
