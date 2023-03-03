@@ -13,7 +13,7 @@ img{
 
 img:active {
   /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 1s;
+  animation: shake 10s;
 }
 
 @keyframes shake {

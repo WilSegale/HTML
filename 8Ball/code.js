@@ -27,11 +27,14 @@ var Answer = [
 	var output = Math.floor(Math.random() * Answer.length); //randomly chosses something form the Answers array
 	// if the user input help it tells them how to use the programe
 	if (Input.value == "help") {
-		Output.innerText = 'input something in the input feild and it will output a answer'
+		Output.innerText = 'Input something in the input feild and it will output an answer.'
+	}
+	else if(Input.value >= 0 || Input.value <= 0){
+		Output.innerText = "No numbers are allowed in the text box only words."
 	}
 	//if the input value has nothing in it it say for them to input somthing in it
 	else if (Input.value == "") {
-		Output.innerText = "Plases input something in the text box"
+		Output.innerText = "Please input something in the text box."
 	}
 	//output a answer of the users input
 	else {
