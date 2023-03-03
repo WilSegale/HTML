@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 #timer div {
     width: 25%;
     text-align: center;
