@@ -25,13 +25,17 @@ var Answer = [
 	var Input = document.getElementById("input") //user input
 	var Output = document.getElementById('output') //the output of the users input
 	var output = Math.floor(Math.random() * Answer.length); //randomly chosses something form the Answers array
+	
 	// if the user input help it tells them how to use the programe
 	if (Input.value == "help") {
 		Output.innerText = 'Input something in the input feild and it will output an answer.'
 	}
+
+	//tells the program if  a number is used
 	else if(Input.value >= 0 || Input.value <= 0){
 		Output.innerText = "No numbers are allowed in the text box only words."
 	}
+
 	//if the input value has nothing in it it say for them to input somthing in it
 	else if (Input.value == "") {
 		Output.innerText = "Please input something in the text box."
