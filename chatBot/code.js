@@ -126,7 +126,6 @@ function output() {
 //outputs the name of the program that will help the user
 function NeedHelp() {
 	var output = document.getElementById("output");
-	var HelpUser = Math.floor((Math.random() * Help.length));
 	var links = Math.floor((Math.random() * HelpLinks.length));
 
 	output.innerHTML = 'Please wait im trying to find a site that will best help you.';
@@ -134,13 +133,9 @@ function NeedHelp() {
 
 	setTimeout(function () {
 		output.style.cursor = "auto";
-		for (var i = 0; i < Help.length; i++) {
-			if (output) {
 				output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-				Help[HelpUser] + "This website might help you. " +
+				"This website might help you. " +
 				HelpLinks[links];
-			}
-		}
 	}, 3 + seconds);
 }
 
