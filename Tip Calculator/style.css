@@ -1,5 +1,5 @@
 body {
-  width:auto;
+	width:auto;
 	font-family: Roboto;
 	background:#E21C04;
 }
@@ -25,14 +25,10 @@ h1 {
 }
 
 /*says where the Chooses an option should be*/
-p {
-	padding-left: 20px;
-}
+p {padding-left: 20px;}
 
 
-input {
-	padding-left: 20px;
-}
+input {padding-left: 20px;}
 
 #billamt {
 	font-size: 14px;
@@ -53,9 +49,7 @@ input {
 	font-size: 14px;
 }
 
-.dollarSign {
-	display: inline;
-}
+.dollarSign {display: inline;}
 
 #serviceQual {
 	padding: 13px 13px 20px 20px;
