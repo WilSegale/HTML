@@ -1,9 +1,5 @@
-#timer {
-    display: flex;
-    justify-content: space-between;
-}
-
-#timer div {
-    width: 25%;
+p{
     text-align: center;
+    font-size: 60px;
+    margin-top: 0;
 }
