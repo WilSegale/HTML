@@ -98,7 +98,7 @@ function NeedHelp() {
 		input.includes("dont want to be alive")) {
 		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} 
-	else if(input == "help" && EnterKey == enter){
+	else if(input == "help"){
 		output.innerHTML = "input how you are feeling and I will help you the best I can."
 	}
 	
