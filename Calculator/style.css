@@ -32,17 +32,13 @@ input[type="text"] {
 }
 
 /*the calculator*/
-#Calculator {
-    color: black;
-}
+#Calculator {color: black;}
+
+/*The solve button*/
+.solve:hover{background-color: lime;}
 
 /*the clear button*/
-.solve:hover{
-    background-color: lime;
-}
-.c:hover {
-    background: red;
-}
+.c:hover {background: red;}
 
 /*the solve button*/
 :focus {
