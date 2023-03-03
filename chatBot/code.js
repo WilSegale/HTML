@@ -157,8 +157,8 @@ function Privacy() {
 
 	if (output.style.display == "block") {
 		output.style.display = "none";
-	} 
-	
+	}
+
 	else {
 		output.style.display = "block";
 	}
