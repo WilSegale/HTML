@@ -32,7 +32,7 @@ var Answer = [
 	}
 
 	//tells the program if  a number is used
-	else if(Input.value >= 0 || Input.value <= 0){
+	else if(Input.value >= 0 || Input.value <= -1){
 		Output.innerText = "No numbers are allowed in the text box only words."
 	}
 
