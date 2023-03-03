@@ -2,12 +2,13 @@
 #body{
   text-align:center;
 }
+
 #input{
   width: 12%;
 }
 
 img{
-    width:50px;
+  width:50px;
 }
   
 /*if the user hovers over the Privacy link it makes it bigger. So if the user has bad eyes they can read it better*/

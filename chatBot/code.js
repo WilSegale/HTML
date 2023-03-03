@@ -148,7 +148,7 @@ function NeedHelp() {
 
 //tell the users that nothing is shared and nothing is saved on the site
 function Privacy() {
-	var output = document.getElementById("output");
+	var output = document.getElementById("Privacy");
 	output.innerHTML = 
 		'This website will save nothing that you say and your info will be deleted immediately when you close the site. </br>' +
 		'Everything that you say is confidential and will not be shared with the developer. This is a place for you to feel safe and talk about your feelings. </br>' +
@@ -158,6 +158,7 @@ function Privacy() {
 	if (output.style.display == "block") {
 		output.style.display = "none";
 	} 
+	
 	else {
 		output.style.display = "block";
 	}
