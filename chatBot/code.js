@@ -66,7 +66,7 @@ function Enter(event) {
 	if (input.includes("hurt someone") && EnterKey == enter ||
 		input.includes("cutting") && EnterKey == enter ||
 		input.includes("die") && EnterKey == enter ||
-		input.includes("alive") && EnterKey == enter) {
+		input.includes("dont want to be alive") && EnterKey == enter) {
 			NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} 
 
@@ -121,9 +121,9 @@ function output() {
 
 	setTimeout(function () {
 		output.style.cursor = "auto";
-			output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-			"This website might help you. " +
-			HelpLinks[links];
+		output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
+		"This website might help you. " +
+		HelpLinks[links];
 	}, 3 + seconds);
 }
 
@@ -138,9 +138,9 @@ function NeedHelp() {
 
 	setTimeout(function () {
 		output.style.cursor = "auto";
-				output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-				"This website might help you. " +
-				HelpLinks[links];
+		output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
+		"This website might help you. " +
+		HelpLinks[links];
 	}, 3 + seconds);
 }
 
