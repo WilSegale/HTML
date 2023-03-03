@@ -1,7 +1,10 @@
+// this is the key code for the enter button
 let enter = 13;
+
 //list of quotes for the users to read
 let seconds = "0000"
 
+// this is the array for the person who has problems that need fixing
 var problems = [
 	"Hard times will make you grow.",
 	"Don't let your past determine your future.",
@@ -92,11 +95,11 @@ function NeedHelp() {
 	if (input.includes("hurt someone") ||
 		input.includes("cutting") ||
 		input.includes("die") ||
-		input.includes("alive")) {
+		input.includes("dont want to be alive")) {
 		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} 
 	else if(input == "help" && EnterKey == enter){
-		output.innerHTML="input how you are feeling and I will help you the best I can."
+		output.innerHTML = "input how you are feeling and I will help you the best I can."
 	}
 	
 	else {
@@ -109,6 +112,7 @@ function NeedHelp() {
 	}
 }
 
+// this output the best answer if they want to kill themself
 function output() {
 	var output = document.getElementById("output");
 	var links = Math.floor((Math.random() * HelpLinks.length));
@@ -124,6 +128,7 @@ function output() {
 }
 
 //outputs the name of the program that will help the user
+//tell the users that they will find a program that might help you with your thoughts
 function NeedHelp() {
 	var output = document.getElementById("output");
 	var links = Math.floor((Math.random() * HelpLinks.length));
@@ -138,8 +143,6 @@ function NeedHelp() {
 				HelpLinks[links];
 	}, 3 + seconds);
 }
-
-//tell the users that they will find a program that might help you with your thoughts
 
 //tell the users that nothing is shared and nothing is saved on the site
 function Privacy() {
