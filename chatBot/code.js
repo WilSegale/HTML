@@ -71,7 +71,7 @@ function Enter(event) {
 	} 
 
 	else if(input == "help" && EnterKey == enter){
-		output.innerHTML="input how you are feeling and I will help you the best I can."
+		output.innerHTML = "Input how you are feeling and I will help you the best I can."
 	}
 
 	else {
@@ -99,11 +99,11 @@ function NeedHelp() {
 		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} 
 	else if(input == "help"){
-		output.innerHTML = "input how you are feeling and I will help you the best I can."
+		output.innerHTML = "Input how you are feeling and I will help you the best I can."
 	}
 	
 	else {
-		for (var i = 0; i < problems.length; i++) {
+		for ( i = 0; i < problems.length; i++) {
 			if (input) {
 				userInput.value = "";
 				output.innerHTML = problems[outputProblems];
