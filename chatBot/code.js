@@ -64,11 +64,13 @@ function Enter(event) {
 		input.includes("cutting") && EnterKey == enter ||
 		input.includes("die") && EnterKey == enter ||
 		input.includes("alive") && EnterKey == enter) {
-		NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
+			NeedHelp(); //this function will send the user to a different function that will say "I am not trained in this but let me find you someone who is please hold"
 	} 
+
 	else if(input == "help" && EnterKey == enter){
 		output.innerHTML="input how you are feeling and I will help you the best I can."
 	}
+
 	else {
 		for (var i = 0; i < problems.length; i++) {
 			if (input && EnterKey == 13) {
@@ -115,11 +117,9 @@ function output() {
 
 	setTimeout(function () {
 		output.style.cursor = "auto";
-		for (var i = 0; i < Help.length; i++) {
 			output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-			Help[HelpUser] + "This website might help you. " +
+			"This website might help you. " +
 			HelpLinks[links];
-		}
 	}, 3 + seconds);
 }
 
