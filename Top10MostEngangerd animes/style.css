@@ -1,5 +1,5 @@
 html{
-	scroll-behavior: smooth;
+	scroll-behavior:smooth;
 	width:auto;
 }
 
@@ -16,3 +16,39 @@ span{text-decoration: underline;}
 #li2{text-align: left;}
 
 #Center{text-align: center;}
+
+.dropbtn {
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {background-color: #2980B9;}
+
+.dropdown {
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	position: left 10px;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
