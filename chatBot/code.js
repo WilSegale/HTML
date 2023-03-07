@@ -35,16 +35,16 @@ var problems = [
 
 //This will give the users a link to click if they want to get help
 var HelpLinks = [
-	'<a href="https://afsp.org/find-support/resources/">American Foundation for Suicide Prevention (AFSP)</a>',
-	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml">National Institute of Mental Health (NIMH)</a>',
-	'<a href="https://www.sptsusa.org/">Society for the Prevention of Teen Suicide (SPTS)</a>',
-	'<a href="https://www.cdc.gov/violenceprevention/suicide/resources.html">Centers for Disease Control and Prevention (CDC)</a>',
-	'<a href="https://www.nami.org/Home">Nami</a>',
-	'<a href="https://www.sprc.org/">Suicide Prevention Resource Center (SPRC)</a>',
-	'<a href="https://www.crisistextline.org/">Crisis Text Line</a>',
-	'<a href="https://www.bethe1to.com/">Bethe1to</a>',
-	'<a href="https://save.org/">Suicide Awareness Voices of Education (SAVE)</a>',
-	'<a href="https://thetrevorproject.org/">The Trevor Project</a>'
+	'<a href="https://afsp.org/find-support/resources/" target="_blank" >American Foundation for Suicide Prevention (AFSP)</a>',
+	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml" target="_blank" >National Institute of Mental Health (NIMH)</a>',
+	'<a href="https://www.sptsusa.org/" target="_blank" >Society for the Prevention of Teen Suicide (SPTS)</a>',
+	'<a href="https://www.cdc.gov/violenceprevention/suicide/resources.html" target="_blank" >Centers for Disease Control and Prevention (CDC)</a>',
+	'<a href="https://www.nami.org/Home" target="_blank" >Nami</a>',
+	'<a href="https://www.sprc.org/" target="_blank" >Suicide Prevention Resource Center (SPRC)</a>',
+	'<a href="https://www.crisistextline.org/" target="_blank" >Crisis Text Line</a>',
+	'<a href="https://www.bethe1to.com/" target="_blank" >Bethe1to</a>',
+	'<a href="https://save.org/" target="_blank" >Suicide Awareness Voices of Education (SAVE)</a>',
+	'<a href="https://thetrevorproject.org/" target="_blank" >The Trevor Project</a>'
 ];
 
 //tell the users how to program works
