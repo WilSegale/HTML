@@ -10,5 +10,4 @@ function convertTemperature() {
     else{
         OUTPUT.innerHTML = celsius + "°C = " + fahrenheit + "°F";
     }
-    
 }
