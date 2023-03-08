@@ -1,0 +1,21 @@
+body{
+    background-color:  #2980B9;
+}
+#answer{
+    font-size:20px;
+}
+
+#answer:Hover{
+    font-size:40px;
+}
+#box {
+    -moz-animation: bgcolorchange 4s infinite; /* Chrome, Safari, Opera */ 
+    -webkit-animation: bgcolorchange 4s infinite; /* Chrome, Safari, Opera */ 
+    animation: 4s infinite bgcolorchange;
+    border-radius:35px;
+    background:tan;
+    border: dashed green;
+    padding: 50px;
+    margin: 20px;
+}
+    
