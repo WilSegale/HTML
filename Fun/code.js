@@ -1,4 +1,5 @@
 function myFunction(){
-    document.body.style.background = x;
-    col.style.color="";    
+    inputfiled = document.getElementById("color")
+    document.body.style.background = color;
+    col.style.color = color;    
 }

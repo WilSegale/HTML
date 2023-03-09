@@ -7,12 +7,43 @@
         <script src="code.js"></script>
     </head>
     <body id="color">
-        <h1>Welcome to my page</h1>
-        <p>This is some sample text.</p>
-        <input id="color" type="text"/>
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-        <div id="box">
-            <div id="answer">asdfasdfsdaf</div>
-          </div>  
+        <div id="countdown">
+            <p id="ip"></p>
+            <button onclick="getIPADDR()" id="IP">What is my ip?</button>
+            <button onclick="Whats_today()">whats today</button>
+            <button onclick="what_is_tommorrow()">what is tommorrow</button>
+            <button onclick="noBack()" id="noBack">No Back Ground</button>
+            <button onclick="Back()" id="back">background</button>
+            <div id="FeedBack">
+                <a href="mailto:willsegale@gmail.com?subject=Feed back&body= will my suggestion is taht you should">Feed Back</a>
+            </div>
+            <div id="Center">
+                <b>
+                    <span id="hr" x1="70" y1="70" x2="70" y2="70">00</span>
+                    <span>:</span>
+                    <span id="min" x1="70" y1="70" x2="70" y2="70">00</span>
+                    <span>:</span>
+                    <span id="sec" x1="70" y1="70" x2="70" y2="70">00</span>
+                    <span id="suffix">--</span>
+                    <p id="message"></p>
+                </b>
+            </div>
+            <input type="text" id="code" autocapitalize="off"/>
+            <input type="button" id="codes" onclick="code()"/>
+            <br>
+            <!--the code for the text box-->
+            <input type="text">
+            <br>
+            <br>
+            <input type="text" id="numbers">
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
     </body>
 </html>
