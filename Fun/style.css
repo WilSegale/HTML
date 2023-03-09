@@ -1,4 +1,6 @@
-
+.Center{
+    text-align: center;
+}
 #answer{
     font-size:20px;
 }
