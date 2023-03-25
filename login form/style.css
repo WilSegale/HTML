@@ -1,3 +1,12 @@
 #login-form{
      text-align: center;
 }
+
+#login-form-submit{
+     border-radius: 10px;
+     background-color: #000000;
+     color: white;
+     text-align: center;
+     font-size: 24px;
+     line-height: 50px;
+}
