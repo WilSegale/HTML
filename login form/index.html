@@ -11,11 +11,13 @@
 			<p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
 		</div>
 		<form id="login-form">
-			<input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username" required/>
-			<br>
-			<input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password" required/>
-			<br>
-			<input type="submit" value="Login" id="login-form-submit" onclick="Login()" readonly/>
-		</form>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required>
+		   
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+		   
+			<button type="submit">Login</button>
+		</form>		   
 	</body>
 </html>
