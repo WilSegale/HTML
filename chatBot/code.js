@@ -1,7 +1,7 @@
 // this is the key code for the enter button
 let enter = 13;
 
-//list of quotes for the users to read
+//this is the ending wait for the wait command
 let seconds = "0000"
 
 // this is the array for the person who has problems that need fixing
