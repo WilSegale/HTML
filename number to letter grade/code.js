@@ -99,6 +99,9 @@ function CollegeGradeConvert(){
 	var firstNumber = prompt("Please enter a the top number in your collage grade list");
 	var secondNumber = prompt("Please enter a the bottom number in your collage grade list");
 	var output = firstNumber/secondNumber
+	if(firstNumber && secondNumber  == null) {
+		alert('error: you must provide a first and second number')
+	}
 	alert(`Your grade is: ${output}`)
 }
 
