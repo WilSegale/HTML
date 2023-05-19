@@ -1,9 +1,10 @@
 #Center{
-    text-align: center;
+    text-align: center !important;
 }
+
 .centerTitle {
     width: 100%;
-    text-align: center;
+    text-align: center !important;
     padding-top: 35px;
     font-size: 3rem;
 }
