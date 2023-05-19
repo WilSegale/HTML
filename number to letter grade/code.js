@@ -20,21 +20,19 @@ function clock() {
  
 	//call every second
 	setTimeout(clock, 1000);
- }
+}
  
- //sets the time.
- function setText(id, val) {
+//sets the time.
+function setText(id, val) {
 	if (val < 10) {val = '0' + val;}
  
 	document.getElementById(id).innerHTML = val;
- }
+}
  
- //shows the clock time.
- window.onload = clock;
- 
- 
- //Covert number grade to letter grade
- 
+//shows the clock time.
+window.onload = clock;
+
+//Covert number grade to letter grade for high school 
  function grades() {
  
 	//if the input box doesn't have any value does it does nothing.
@@ -46,7 +44,7 @@ function clock() {
 	//if the prompt has any numbers or doesn't have any input it shows an error message.
 	var subject = prompt("Put your subject in.");
 	if (subject >= 0) {
-	   alert("Error I don't understand by what you mean by " + subject + "? Could you please try again?");
+	   alert("Error I don't understand by what you mean by '" + subject + "'? Could you please try again?");
 	   return true;
 	}
  
@@ -58,6 +56,7 @@ function clock() {
  
 	//number grade to letter grade starts
 	document.getElementById("button").style.cursor = "pointer";
+	
 	//grade letter A+
 	if (grade >= 101) {grades.innerText = "You got an A+ in " + subject + ". Good job your in a HON's class.";}
  
@@ -92,14 +91,22 @@ function clock() {
 	else if (grade >= 60) {grades.innerText = "You got an D in " + subject + ". You are going to FAIL if you get a lower grade.";}
  
 	//grade letter F
-	else if (grade <= 59) {grades.innerText = "You got an F in " + subject + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";}
- }
- 
- //Only numbers not letters in the text box
+	else if (grade <= 59) {grades.innerText = "You got an F in " + subject.toUpperCase(false) + ". You are going to FAIL this term. So try and get your grades up, and try to stay after if you can.";}
+}
+
+//Covert number grade to letter grade for college students
+function CollegeGradeConvert(){
+	var firstNumber = prompt("Please enter a the top number in your collage grade list");
+	var secondNumber = prompt("Please enter a the bottom number in your collage grade list");
+	var output = firstNumber/secondNumber
+	alert("your grade is: " + output)
+}
+
+//Only numbers not letters in the text box
  document.onkeydown = function (lettersNo) {
 	if (lettersNo.ctrlKey && (lettersNo.keyCode == 67 || lettersNo.keyCode == 86 || lettersNo.keyCode == 85 || lettersNo.keyCode == 117)) { //Alt+c, Alt+v will also be disabled sadly.
 	   return;
 	}
 	var code = (lettersNo.which) ? lettersNo.which : lettersNo.keyCode;
 	if (code > 31 && (code < 48 || code > 57)) {lettersNo.preventDefault();}
- };
+};
