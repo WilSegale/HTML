@@ -39,11 +39,12 @@ function grades() {
 	if (grade == "") {return true;}
  
 	var grades = document.getElementById("answer");
+	
 	//if the prompt has any numbers or doesn't have any input it shows an error message.
 	var subject = prompt("Put your subject in.").toLocaleUpperCase();
 	if (subject >= 0) {
 	   alert(`Error I don't understand by what you mean by "${subject}"? Could you please try again?`);
-	   return true;
+	   return subject;
 	}
  
 	//if the user does not input anything it continuously says 'put your subject in.'
@@ -98,11 +99,16 @@ function grades() {
 function CollegeGradeConvert(){
 	var firstNumber = prompt("Please enter a the top number in your collage grade list");
 	var secondNumber = prompt("Please enter a the bottom number in your collage grade list");
-	var output = firstNumber/secondNumber
-	if(firstNumber && secondNumber  == null) {
-		alert('error: you must provide a first and second number')
+	
+	if(firstNumber == "" && secondNumber  == "") {
+		alert("Please enter a number in your collage grade list")
+		return CollegeGradeConvert();
 	}
-	alert(`Your grade is: ${output}`)
+
+	else{
+		var output = firstNumber/secondNumber
+		alert(`Your grade is: ${output}`)
+	}
 }
 
 //Only numbers not letters in the text box
