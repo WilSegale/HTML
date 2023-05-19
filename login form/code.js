@@ -9,4 +9,3 @@ form.addEventListener('submit', function(event) {
   // Send the username and password to the server for authentication
   // using a fetch or XMLHttpRequest request
 });
-// connect to XMLHTTPREQUEST ?
