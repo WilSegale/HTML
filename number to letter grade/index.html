@@ -9,7 +9,7 @@
 		<!-- Set title of the page -->
 		<title>Letter To Number rade</title>
 	</head>
-	<body>
+	<body id="body">
 		<b>
 			<!-- Create a clock with hours, minutes, seconds and suffix -->
 			<span id="hr" x1="70" y1="70" x2="70" y2="38">00</span>
@@ -21,6 +21,8 @@
 			<!-- Display messages for the user -->
 			<p id="message"></p>
 		</b>
+		<button type="button" value="Color" onclick="ChangeColor()">Change Color</button>
+
 		<div id="Center">
 			<!-- Display today's date -->
 			<p id="today" class="today">
@@ -43,7 +45,7 @@
 				</script>
 			</p>
 			<!-- Top Section, holds logo and title -->
-			<div class="centerTitle">Number grade to letter grade.</div>
+			<div class="centerTitle" id="text">Number grade to letter grade.</div>
 			<!-- Clear the float -->
 			<div class="clearEm"></div>
 			<!-- Middle section, contains menu, boxes, and lists -->

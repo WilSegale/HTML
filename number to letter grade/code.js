@@ -22,6 +22,30 @@ function clock() {
 	setTimeout(clock, 1000);
 }
  
+function ChangeColor(){
+	var change = prompt('Change Color')
+	var element = document.getElementById("body");
+	var color = element.style.backgroundColor = change;
+	if(color == "black" || color == "BLACK"){
+		document.getElementById("hr").style.color = 'white';
+		document.getElementById("min").style.color = 'white';
+		document.getElementById("sec").style.color = 'white';
+		document.getElementById("suffix").style.color = 'white';
+		document.getElementById("today").style.color = 'white';
+		document.getElementById('text').style.color = 'white';
+		document.getElementById('answer').style.color = 'white';
+	}
+	else{
+		document.getElementById("hr").style.color = 'black';
+		document.getElementById("min").style.color = 'black';
+		document.getElementById("sec").style.color = 'black';
+		document.getElementById("suffix").style.color = 'black';
+		document.getElementById("today").style.color = 'black';
+		document.getElementById('text').style.color = 'black';
+		document.getElementById('answer').style.color = 'black';
+	}
+}
+
 //sets the time.
 function setText(id, val) {
 	if (val < 10) {val = '0' + val;}
