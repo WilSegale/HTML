@@ -1,4 +1,4 @@
- //main function for the clock.
+//main function for the clock.
 function clock() {
 	//calculate angle
 	var d, h, m, s;
@@ -17,7 +17,7 @@ function clock() {
 	setText('sec', s);
 	setText('min', m);
 	setText('hr', h);
- 
+
 	//call every second
 	setTimeout(clock, 1000);
 }
@@ -32,7 +32,7 @@ function setText(id, val) {
 window.onload = clock;
 
 //Covert number grade to letter grade for high school 
- function grades() {
+function grades() {
  
 	//if the input box doesn't have any value does it does nothing.
 	var grade = document.getElementById("inputBox").value;
@@ -103,7 +103,7 @@ function CollegeGradeConvert(){
 }
 
 //Only numbers not letters in the text box
- document.onkeydown = function (lettersNo) {
+document.onkeydown = function (lettersNo) {
 	if (lettersNo.ctrlKey && (lettersNo.keyCode == 67 || lettersNo.keyCode == 86 || lettersNo.keyCode == 85 || lettersNo.keyCode == 117)) { //Alt+c, Alt+v will also be disabled sadly.
 	   return;
 	}
