@@ -25,7 +25,6 @@ function clock() {
 //sets the time.
 function setText(id, val) {
 	if (val < 10) {val = '0' + val;}
- 
 	document.getElementById(id).innerHTML = val;
 }
  
@@ -49,7 +48,9 @@ window.onload = clock;
  
 	//if the user does not input anything it continuously says 'put your subject in.'
 	else if (subject === "") {
-		for (subject; subject === "";) {subject = prompt("Put your subject in");}
+		for (subject; subject === "";) {
+			subject = prompt("Put your subject in");
+		}
 	}
 	// prompt ends
  
