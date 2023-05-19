@@ -7,15 +7,15 @@
       <!-- Include external CSS file -->
       <link rel="stylesheet" href="style.css">
       <!-- Set title of the page -->
-      <title>letter to number grade</title>
+      <title>Letter To Number rade</title>
    </head>
    <b>
       <!-- Create a clock with hours, minutes, seconds and suffix -->
-      <span id="hr" x1="70" y1="70" x2="70" y2="38">00</span>
+      <span id="hr" x1="70" y1="70" x2="70" y2="38"  >00</span>
       <span>:</span>
       <span id="min" x1="70" y1="70" x2="70" y2="20" >00</span>
       <span>:</span>
-      <span id="sec" x1="70" y1="70" x2="70" y2="12">00</span>
+      <span id="sec" x1="70" y1="70" x2="70" y2="12" >00</span>
       <span id="suffix">--</span>
       <!-- Display messages for the user -->
       <p id="message"></p>
@@ -37,7 +37,7 @@
             var today = weekday[today.getDay()];
             // If today's weekday is found, display it in the "today" element
             if(today){
-               document.getElementById("today").innerHTML = "Today is " + today;
+               document.getElementById("today").innerHTML = `Today is ${today}`;
             }
          </script>
       </p>
