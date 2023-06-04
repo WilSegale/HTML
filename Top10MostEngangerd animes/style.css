@@ -2,7 +2,9 @@ html{
 	scroll-behavior:smooth;
 	width:auto;
 }
-
+#section:hover{
+	background-color: lightgray !important;
+}
 body{text-transform: uppercase;}
 
 h1{font-weight: bold;}
