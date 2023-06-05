@@ -35,7 +35,7 @@ function calculateTip() {
 		document.getElementById("each").style.display = "block";
 	}
 	else{
-		document.getElementById("input").innerHTML = user+ " you would each need to tip that person.";
+		document.getElementById("input").innerHTML = `${user} you would each need to tip that person.`;
 		document.getElementById("each").style.display = "block";
 	}
 
