@@ -121,9 +121,8 @@ function output() {
 
 	setTimeout(function () {
 		output.style.cursor = "auto";
-		output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-		"This website might help you. " +
-		HelpLinks[links];
+		output.innerHTML = `I am sorry to hear that you are feeling this way. This program will help fix that. This website might help you. ${HelpLinks[links]} `
+
 	}, 3 + seconds);
 }
 
@@ -138,9 +137,8 @@ function NeedHelp() {
 
 	setTimeout(function () {
 		output.style.cursor = "auto";
-		output.innerHTML = "I am sorry to hear that you are feeling this way. This program will help fix that. " +
-		"This website might help you. " +
-		HelpLinks[links];
+		output.innerHTML = `I am sorry to hear that you are feeling this way. This program will help fix that. This website might help you. ${HelpLinks[links]} `
+		
 	}, 3 + seconds);
 }
 
