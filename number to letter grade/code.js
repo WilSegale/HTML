@@ -100,7 +100,7 @@ function CollegeGradeConvert(){
 	var firstNumber = prompt("Please enter a the top number in your collage grade list");
 	var secondNumber = prompt("Please enter a the bottom number in your collage grade list");
 	
-	if(firstNumber == "" && secondNumber  == "") {
+	if(firstNumber == "" && secondNumber == "") {
 		alert("Please enter a number in your collage grade list")
 		return CollegeGradeConvert();
 	}
