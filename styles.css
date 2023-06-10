@@ -1,0 +1,8 @@
+button{
+   border: 10px solid;
+
+}
+
+body.active {
+   background-color: gray;  
+}
