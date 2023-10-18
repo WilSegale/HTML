@@ -1,5 +1,8 @@
-#center{
-    object-fit: center;
+.table-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optionally, to center vertically within the viewport */
 }
 
 /*input box*/
