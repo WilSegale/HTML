@@ -1,3 +1,7 @@
+#center{
+    object-fit: center;
+}
+
 /*input box*/
 input {
     font-size: 20px;
