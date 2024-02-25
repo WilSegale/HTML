@@ -33,7 +33,9 @@ function output() {
 
 	//tells the program if  a number is used
 	else if(Input.value >= 0 || Input.value <= -1){
-		Output.innerText = "Invalid input"
+		if(Output){
+			Output.innerText = "Click the magic 8Ball to see the result."
+		}
 	}
 	//output a answer of the users input
 	else {
