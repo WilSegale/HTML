@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scientific Calculator</title>
+  </head>
+  <style>
+    /* general styling */
+    body {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+
+    /* styling for the form and inputs */
+    form {
+        display: inline-block;
+        margin-top: 50px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #ccc;
+    }
+
+    input[type=text] {
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        text-align: right;
+    }
+
+    /* styling for the buttons */
+    input[type=button] {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+        margin: 10px;
+        border-radius: 35px;
+        border: none;
+        background-color: #ddd;
+        transition: all 0.2s ease-in-out;
+    }
+
+    input[type=button]:hover {
+        background-color: #ccc;
+        cursor: pointer;
+    }
+  </style>
+  <body>
+    <form>
+      <input type="text" id="display" disabled>
+      <br>
+      <input type="button" value="1" onclick="display.value += '1'">
+      <input type="button" value="2" onclick="display.value += '2'">
+      <input type="button" value="3" onclick="display.value += '3'">
+      <input type="button" value="+" onclick="display.value += '+'">
+      <br>
+      <input type="button" value="4" onclick="display.value += '4'">
+      <input type="button" value="5" onclick="display.value += '5'">
+      <input type="button" value="6" onclick="display.value += '6'">
+      <input type="button" value="-" onclick="display.value += '-'">
+      <br>
+      <input type="button" value="7" onclick="display.value += '7'">
+      <input type="button" value="8" onclick="display.value += '8'">
+      <input type="button" value="9" onclick="display.value += '9'">
+      <input type="button" value="*" onclick="display.value += '*'">
+      <br>
+      <input type="button" value="c" onclick="display.value = ''">
+      <input type="button" value="0" onclick="display.value += '0'">
+      <input type="button" value="=" onclick="display.value = eval(display.value)">
+      <input type="button" value="/" onclick="display.value += '/'">
+      <br>
+      <input type="button" value="sin" onclick="display.value += 'Math.sin('">
+      <input type="button" value="cos" onclick="display.value += 'Math.cos('">
+      <input type="button" value="tan" onclick="display.value += 'Math.tan('">
+      <input type="button" value=")" onclick="display.value += ')'">
+      <br>
+      <input type="button" value="log" onclick="display.value += 'Math.log('">
+      <input type="button" value="ln" onclick="display.value += 'Math.log('">
+      <input type="button" value="^" onclick="display.value += '**'">
+      <input type="button" value="sqrt" onclick="display.value += 'Math.sqrt('">
+    </form>
+  </body>
+</html>
