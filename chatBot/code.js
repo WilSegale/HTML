@@ -38,7 +38,7 @@ var HelpLinks = [
 	'<a href="https://afsp.org/find-support/resources/" target="_blank" >American Foundation for Suicide Prevention (AFSP)</a>',
 	'<a href="https://www.nimh.nih.gov/health/topics/suicide-prevention/index.shtml" target="_blank" >National Institute of Mental Health (NIMH)</a>',
 	'<a href="https://www.sptsusa.org/" target="_blank" >Society for the Prevention of Teen Suicide (SPTS)</a>',
-	'<a href="https://www.cdc.gov/violenceprevention/suicide/resources.html" target="_blank" >Centers for Disease Control and Prevention (CDC)</a>',
+	'<a href="https://befrienders.org" target="_blank" >befrienders</a>',
 	'<a href="https://www.nami.org/Home" target="_blank" >Nami</a>',
 	'<a href="https://www.sprc.org/" target="_blank" >Suicide Prevention Resource Center (SPRC)</a>',
 	'<a href="https://www.crisistextline.org/" target="_blank" >Crisis Text Line</a>',
