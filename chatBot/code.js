@@ -116,7 +116,7 @@ function NeedHelp() {
 function output() {
 	var output = document.getElementById("output");
 	var links = Math.floor((Math.random() * HelpLinks.length));
-	output.innerHTML = 'Please wait im trying to find a site that will best Help you.';
+	output.innerHTML = 'Please wait im trying to find a site that will best help you.';
 	output.style.cursor = "progress";
 
 	setTimeout(function () {
