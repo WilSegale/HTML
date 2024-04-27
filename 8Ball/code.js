@@ -39,7 +39,7 @@ function output() {
 	}
 	//output a answer of the users input
 	else {
-		Output.innerText = Answer[1]; //output the answer
+		Output.innerText = Answer[output]; //output the answer
 		Input.value = ""; //clears the user input when they click the 8Ball
 	}
 }
