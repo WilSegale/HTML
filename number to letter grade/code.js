@@ -102,9 +102,10 @@ function CollegeGradeConvert(){
 	
 	if(firstNumber == "" && secondNumber == "") {
 		alert("Please enter a number in your collage grade list")
-		return CollegeGradeConvert();
 	}
-
+	else if(firstNumber == null) {
+		alert("ERRRO")
+	}
 	else{
 		var output = firstNumber/secondNumber
 		alert(`Your grade is: ${output}`)
