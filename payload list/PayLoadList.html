@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payloads</title>
+</head>
+
+<body>
+    <h1 id="Center">Top 10 Most Endangered Animals</h1>
+    <button onclick="dropdown()" class="dropbtn">Navigation</button>
+    <div id="myDropdown" class="dropdown-content">
+        <li><a href="#section2" id="section">Payload2</a></li>
+        <li><a href="#section3" id="section">Payload3</a></li>
+        <li><a href="#section4" id="section">Payload4</a></li>
+        <li><a href="#section5" id="section">Payload5</a></li>
+        <li><a href="#section6" id="section">Payload6</a></li>
+        <li><a href="#section7" id="section">Payload7</a></li>
+    </div>
+    <h1>Payloads</h1>
+
+    <h2>Payload1</h2>
+    <pre>
+        <code>
+REM unlock my windows computer at home
+DUCKY_LANG US
+UPARROW
+DELAY 500
+STRING 945531
+        </code>
+    </pre>
+
+    <h2 id="section2">Payload2</h2>
+    <pre>
+        <code>
+REM diagnostics for home
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 500
+
+REM go to the Desktop folder
+STRING cd OneDrive/Desktop
+ENTER
+DELAY 500
+
+REM makes the folder for the Diagnostics
+STRING mkdir Diagnostics
+ENTER
+DELAY 500
+
+REM go to the folder for the Diagnostics
+STRING cd Diagnostics
+ENTER
+DELAY 500
+
+REM runs the commands for the Diagnostics
+STRING netstat -ano | findstr :22 | findstr ESTABLISHED >> NETSTAT.txt
+ENTER
+DELAY 500
+STRING ping google.com -n 3 >> PING.txt
+ENTER
+DELAY 1000
+STRING ipconfig /all >> IPCONFIG.txt
+ENTER
+DELAY 1000
+STRING tracert google.com >> TRACERT.txt
+ENTER
+DELAY 1000
+STRING nslookup google.com >> NSLOOKUP.txt
+ENTER
+DELAY 1000
+STRING sfc /scannow >> SFC.txt
+ENTER
+DELAY 1000
+STRING wmic qfe list >> WMIC.txt
+ENTER
+DELAY 1000
+STRING robocopy source destination /C /COPYALL >> ROBOCOPY.txt
+ENTER
+DELAY 1000
+STRING schtasks /query >> SCHTASKS.txt
+ENTER
+DELAY 1000
+STRING systeminfo >> SYSTEMINFO.TXT
+ENTER
+        </code>
+    </pre>
+
+    <h2 id="section3">Payload3</h2>
+    <pre>
+<code>REM diagnostics for massybay
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 500
+
+REM go to the Desktop folder
+STRING cd Desktop
+ENTER
+DELAY 500
+
+REM makes the folder for the Diagnostics
+STRING mkdir Diagnostics
+ENTER
+DELAY 500
+
+REM go to the folder for the Diagnostics
+STRING cd Diagnostics
+ENTER
+DELAY 500
+
+REM runs the commands for the Diagnostics
+STRING netstat -ano | findstr :22 | findstr ESTABLISHED >> NETSTAT.txt
+ENTER
+DELAY 500
+STRING ping google.com -n 3 >> PING.txt
+ENTER
+DELAY 1000
+STRING ipconfig /all >> IPCONFIG.txt
+ENTER
+DELAY 1000
+STRING tracert google.com >> TRACERT.txt
+ENTER
+DELAY 1000
+STRING nslookup google.com >> NSLOOKUP.txt
+ENTER
+DELAY 1000
+STRING sfc /scannow >> SFC.txt
+ENTER
+DELAY 1000
+STRING wmic qfe list >> WMIC.txt
+ENTER
+DELAY 1000
+STRING robocopy source destination /C /COPYALL >> ROBOCOPY.txt
+ENTER
+DELAY 1000
+STRING schtasks /query >> SCHTASKS.txt
+ENTER
+DELAY 1000
+STRING systeminfo >> SYSTEMINFO.TXT
+ENTER
+</code>
+    </pre>
+
+    <h2 id="section4">Payload4</h2>
+    <pre>
+<code>REM dianostics for macos
+
+REM opens the spotlight search bar
+GUI SPACE
+DELAY 2000
+
+REM Open the terminal
+STRING terminal
+DELAY 2000
+ENTER
+
+REM goes to the desktop folder, makes the diagnostics folder and go to the diagnostics folder
+DELAY 2000
+STRING cd Desktop && mkdir Dianostics && cd Dianostics
+ENTER
+
+REM Runs the diagnostics commands
+
+REM ping command
+STRING ping google.com -t 3 >> ping.txt
+ENTER
+DELAY 5000
+
+REM Traceroute to Google
+STRING traceroute google.com >> traceroute.txt
+ENTER
+DELAY 5000
+
+REM Check csrutil status
+STRING csrutil status >> csrutil.txt
+ENTER
+DELAY 5000
+
+REM View pfctl information
+STRING sudo pfctl -s info >> pfctl.txt
+ENTER
+DELAY 5000
+
+REM View system software information
+STRING system_profiler SPSoftwareDataType >> system_profiler.txt
+ENTER
+DELAY 5000
+
+REM List all hardware ports
+STRING networksetup -listallhardwareports >> networksetup.txt
+ENTER
+DELAY 5000
+
+REM Display disk space usage
+STRING df -h >> df.txt
+ENTER
+DELAY 5000
+
+REM Display mounted filesystems
+STRING mount >> mount.txt
+ENTER
+DELAY 5000
+
+REM Display process information
+STRING ps aux >> psAux.txt
+ENTER
+DELAY 5000
+
+REM Display process IDs excluding grep
+STRING ps -ef | grep -v grep | awk '{print $2}' >> ps.txt
+ENTER
+DELAY 5000
+
+REM List all users
+STRING dscl . -list /Users >> dscl.txt
+ENTER
+DELAY 5000
+
+REM Display system logs
+STRING cat /var/log/system.log >> cat.txt
+ENTER
+DELAY 5000
+
+REM Perform DNS lookup for Google
+STRING nslookup google.com >> nslookup.txt
+ENTER
+DELAY 5000
+
+REM View pfctl rules
+STRING sudo pfctl -sa >> pfctl.txt
+ENTER
+DELAY 5000
+
+REM Display virtual memory statistics
+STRING vm_stat >> vm.txt
+ENTER
+DELAY 5000
+
+REM Show SSH process logs
+STRING log show --predicate 'process == "ssh"' --info >> logSSH.txt
+ENTER
+DELAY 5000
+
+REM Show SSHD process logs
+STRING log show --predicate 'process == "sshd"' --info >> logSSHD.txt
+ENTER
+</code>
+    </pre>
+
+    <h2 id="section5">Payload5</h2>
+    <pre>
+<code>REM see wifi passwords for windows computers
+GUI r
+DELAY 500
+STRING POWERSHELL
+ENTER
+DELAY 500
+STRING cd OneDrive/Desktop
+ENTER
+DELAY 500
+STRING mkdir WIFI_Passwords
+ENTER
+DELAY 500
+STRING cd WIFI_Passwords
+ENTER
+DELAY 500
+STRING echo "Command that has just been run is: (netsh wlan show profiles)" >> WIFI_PASS.txt
+ENTER
+DELAY 500
+STRING echo "-----------~BREAK~-------------" >> WIFI_PASS.txt
+ENTER
+DELAY 500
+STRING netsh wlan show profiles >> WIFI_PASS.txt
+ENTER
+DELAY 500
+STRING echo "-----------~BREAK~-------------" >> WIFI_PASS.txt
+ENTER
+DELAY 500
+STRING echo "To see the passwords run (netsh wlan show profile [name of wifi] key=clear)" >> WIFI_PASS.txt
+ENTER
+</code>
+    </pre>
+
+    <h2 id="section6">Payload6</h2>
+    <pre>
+<code>REM Remove the diagnostics and WIFI_passwords file from your computer for windows
+
+GUI r
+DELAY 500
+STRING POWERSHELL
+ENTER
+DELAY 500
+STRING cd OneDrive/Desktop
+ENTER
+DELAY 500
+STRING del Diagnostics
+ENTER
+DELAY 500
+STRING y
+ENTER
+DELAY 500
+STRING del WIFI_Passwords
+ENTER
+DELAY 500
+STRING y
+ENTER
+DELAY 500
+STRING exit
+ENTER
+</code>
+    </pre>
+
+    <h2 id="section7">Payload7</h2>
+    <pre>
+<code>REM get wifi passwords from macos
+GUI SPACE
+DELAY 500
+
+STRING Terminal
+DELAY 500
+ENTER
+
+REM go to the desktop folder and make the folder that will store the wifi passwords
+DELAY 500
+STRING cd Desktop && mkdir Wifi_passwords && cd Wifi_passwords
+DELAY 500
+ENTER
+
+REM install homebrew
+DELAY 500
+STRING /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"
+DELAY 2000
+ENTER
+
+REM install the package for wifi-password
+DELAY 500
+STRING brew install wifi-password
+DELAY 500
+ENTER
+
+REM output a file that tells the user how to use the program to grab the wifi password with Wifi-password package
+STRING echo "To use the wifi-password function use [wifi-password (name of wifi name)] and then press enter, you will be given a prompt to put your username and password in" >> instructions
+DELAY 500
+ENTER
+</code>
+    </pre>
+</body>
+
+</html>
