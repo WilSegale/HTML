@@ -104,7 +104,7 @@ function CollegeGradeConvert(){
 		alert("Please enter a number in your collage grade list")
 	}
 	else if(firstNumber == null) {
-		alert("ERRRO")
+		alert("ERROR")
 	}
 	else{
 		var output = firstNumber/secondNumber
