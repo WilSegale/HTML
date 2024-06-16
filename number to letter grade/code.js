@@ -46,6 +46,10 @@ function grades() {
 	   alert(`Error I don't understand by what you mean by "${subject}"? Could you please try again?`);
 	   return subject;
 	}
+	else if (subject <= 0){
+		alert(`Error I don't understand by what you mean by "${subject}"? Could you please try again?`);
+		return subject
+	}
  
 	//if the user does not input anything it continuously says 'put your subject in.'
 	else if (subject === "") {
