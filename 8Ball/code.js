@@ -1,45 +1,61 @@
 var Answer = [
-	"It is certain",
-	"It is decidedly so",
-	"Without a doubt",
-	"Yes definitely",
-	"You may rely on it",
-	"As I see it, yes",
-	"Most likely",
-	"Outlook good",
-	"Yes",
-	"Signs point to yes",
-	"Reply hazy, try again",
-	"Ask again later",
-	"Better not tell you now",
-	"Cannot predict now",
-	"Concentrate and ask again",
-	"Don’t count on it",
-	"My reply is no",
-	"My sources say no",
-	"Outlook not so good",
-	"Very doubtful"
-  ];
-  
-function output() {
-	var Input = document.getElementById("input") //user input
-	var Output = document.getElementById('output') //the output of the users input
-	var output = Math.floor(Math.random() * Answer.length); //randomly chosses something form the Answers array
+    "It is certain",
+    "It is decidedly so",
+    "Without a doubt",
+    "Yes definitely",
+    "You may rely on it",
+    "As I see it, yes",
+    "Most likely",
+    "Outlook good",
+    "Yes",
+    "Signs point to yes",
+    "Reply hazy, try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+    "Don’t count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful"
+];
 
-	// if the user input help it tells them how to use the programe
-	if (Input.value == "help") {
-		Output.innerText = 'Input something in the input feild and it will output an answer.'
-	}
+// Ensure the DOM is loaded before accessing elements
+document.addEventListener("DOMContentLoaded", function() {
+    var Input = document.getElementById("input"); // User input
+    var Output = document.getElementById('output'); // Output element
 
-	//tells the program if  a number is used
-	else if(Input.value >= 0 || Input.value <= -1){
-		if(Output){
-			Output.innerText = "Click the magic 8Ball to see the result."
-		}
-	}
-	//output a answer of the users input
-	else {
-		Output.innerText = Answer[output]; //output the answer
-		Input.value = ""; //clears the user input when they click the 8Ball
-	}
-}
+    function info() {
+        // Onload it says how to work the program
+        Output.innerText = "Click the magic 8Ball to see the result.";
+    }
+
+    function output() {
+        var outputIndex = Math.floor(Math.random() * Answer.length); // Randomly choose something from the Answers array
+
+        // If the user inputs "help"
+        if (Input.value.trim().toLowerCase() === "help") {
+            Output.innerText = 'Input something in the input field and it will output an answer.';
+        }
+        // Check if the input is a number
+        else if (!isNaN(Input.value) && Input.value.trim() !== "") {
+            Output.innerText = "Click the magic 8Ball to see the result.";
+        }
+        // Output an answer to the user's input
+        else {
+            Output.innerText = Answer[outputIndex]; // Output the answer
+        }
+        Input.value = ""; // Clear the user input
+    }
+
+    // You might want to set this function to run when the page loads
+    info();
+    
+    // Add an event listener if you want to trigger output on Enter key press
+    Input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            output();
+        }
+    });
+});
