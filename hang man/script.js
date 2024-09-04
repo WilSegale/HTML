@@ -252,7 +252,13 @@ window.onload = function () {
 	};
 
 	play();
+	answer.onclick = function () {
+		document.getElementById("answer").disabled = true;
 
+		alphabet.disabled = true;
+		document.getElementById("reset").disabled = false;
+		document.getElementById("clue").innerHTML = " The Word Was - " + word;
+	};
 	// Hint
 	hint.onclick = function () {
 		document.getElementById("hint").disabled = true;
