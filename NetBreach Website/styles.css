@@ -39,3 +39,8 @@ footer {
     padding: 10px;
     text-align: center;
 }
+#creator {
+    width: 200px;
+    height: 100;
+    border-radius: 100%;
+}
