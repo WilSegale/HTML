@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decryption Tool</title>
+    <title>Encryption Tool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Decryption Tool</h1>
-        <form method="POST">
+        <h1>Encryption Tool</h1>
+        <form method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="input_file">Encrypted File Path:</label>
-                <input type="text" name="input_file" class="form-control" required>
+                <label for="file">Select File to Encrypt:</label>
+                <input type="file" name="file" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="password_file">Password File Path:</label>
-                <input type="text" name="password_file" class="form-control" required>
+                <label for="password">Enter Encryption Password:</label>
+                <input type="password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary">Start Decryption</button>
+            <button type="submit" class="btn btn-primary">Start Encryption</button>
         </form>
         <hr>
+        <!-- Display flash messages for results -->
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
             {% for category, message in messages %}
