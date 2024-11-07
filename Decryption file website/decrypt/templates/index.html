@@ -28,11 +28,7 @@
                <input type="file" name="password_file" class="form-control" required>
             </div>
             <!-- Submit button to start decryption -->
-            <button type="submit" class="btn btn-primary">Start Decryption</button>
-            <!-- Button to show decryption attempts -->
-            <form method="POST" action="/show_attempts" enctype="multipart/form-data">
-              <button type="submit" class="btn btn-secondary">Show Attempts</button>
-           </form>         
+            <button type="submit" class="btn btn-primary">Start Decryption</button>        
          <hr>
          <!-- Display flash messages for success or error notifications (Jinja templating) -->
          {% with messages = get_flashed_messages(with_categories=true) %}
