@@ -43,7 +43,7 @@ def validate_decryption(output_file):
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    global attempt_count  # Access the global attempt counter
+    global attempt_count
     if request.method == "POST":
         if "input_file" not in request.files or "password_file" not in request.files:
             flash("Please upload both an encrypted file and a password file.", "danger")
@@ -62,23 +62,21 @@ def home():
 
         output_file = os.path.join(DECRYPTED_FOLDER, f"decrypted_{uuid.uuid4().hex}.txt")
 
-        # Count the total number of passwords
         with open(password_path, "r") as f:
             password_list = f.readlines()
             total_passwords = len(password_list)
         flash(f"Total passwords to attempt: {total_passwords}", "info")
 
-        attempt_count = 0  # Reset attempt count at the start of each decryption attempt
+        attempt_count = 0
         start_time = time.time()
 
-        # Attempt to decrypt using each password
         for password in password_list:
             password = password.strip()
             attempt_count += 1
-            total_time = time.time() - start_time
 
             if decrypt_file(encrypted_path, output_file, password):
                 if validate_decryption(output_file):
+                    total_time = time.time() - start_time
                     flash(f"File decrypted successfully with password: {password}", "success")
                     flash(f"Total attempts: {attempt_count}", "info")
                     flash(f"Total time elapsed: {total_time:.2f} seconds", "info")
@@ -91,7 +89,7 @@ def home():
         os.remove(encrypted_path)
         os.remove(password_path)
 
-    return render_template("index.html")
+    return render_template("index.html", attempt_count=attempt_count)
 
 # Route to display the number of attempts
 @app.route("/show_attempts", methods=["POST"])
