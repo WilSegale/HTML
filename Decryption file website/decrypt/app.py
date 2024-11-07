@@ -6,7 +6,16 @@ import uuid
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.secret_key = "Cmonster2006"
+
+# Load the secret key from a dictionary in data.txt
+secret_data = {}
+with open('rockyou.txt', 'r') as file:
+    for line in file:
+        key, value = line.strip().split(':')
+        secret_data[key.strip()] = value.strip()
+
+# Set Flask's secret key from the loaded dictionary
+app.secret_key = secret_data.get('secret_key', 'default_secret_key')  # Use a default if not found
 
 UPLOAD_FOLDER = "uploads"
 DECRYPTED_FOLDER = "decrypted_files"
@@ -98,4 +107,4 @@ def show_attempts():
     return redirect(url_for("home"))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
