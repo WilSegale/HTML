@@ -42,11 +42,15 @@
          {% endwith %}
          
          <!-- Conditional display of download link if decryption is successful -->
-         {% if request.args.get('filename') %}
-         <div class="alert alert-success mt-4">
-            <a href="{{ url_for('download_file', filename=request.args.get('filename')) }}">Download Decrypted File</a>
-         </div>
+         {% with messages = get_flashed_messages(with_categories=true) %}
+         {% if messages %}
+            <ul>
+               {% for category, message in messages %}
+               <li class="{{ category }}">{{ message }}</li>
+               {% endfor %}
+            </ul>
          {% endif %}
+         {% endwith %}
 
          <!-- JavaScript to handle file input and read file content -->
          <script>

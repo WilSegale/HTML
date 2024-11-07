@@ -23,7 +23,6 @@ def decrypt_file(input_file, output_file, password):
             ["openssl", "enc", "-d", "-aes-256-cbc", "-in", input_file, "-out", output_file, "-pass", f"pass:{password}"],
             stderr=subprocess.DEVNULL
         )
-        flash(f"Attempted password: {password}", "info")
         return result.returncode == 0
     except Exception as e:
         print(f"Error during decryption: {e}")
