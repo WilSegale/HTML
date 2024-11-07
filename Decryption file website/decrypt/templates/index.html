@@ -28,7 +28,10 @@
                <input type="file" name="password_file" class="form-control" required>
             </div>
             <!-- Submit button to start decryption -->
-            <button type="submit" class="btn btn-primary">Start Decryption</button>        
+            <button type="submit" class="btn btn-primary">Start Decryption</button> 
+            <button onclick="location.reload()">Refresh Page</button>
+            <button onclick="saveTextToFile()">Save to File</button>
+
          <hr>
          <!-- Display flash messages for success or error notifications (Jinja templating) -->
          {% with messages = get_flashed_messages(with_categories=true) %}
