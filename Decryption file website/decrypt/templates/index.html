@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Specifies the document type as HTML5 -->
+      <meta charset="UTF-8">
+      <!-- Sets the character encoding to UTF-8 for supporting special characters -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Sets the initial scale for responsive design on mobile devices -->
+      <title>Decryption Tool</title>
+      <!-- Links to the Bootstrap CSS library for styling -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   </head>
+   <body>
+      <!-- Main container for content with Bootstrap margin-top spacing -->
+      <div class="container mt-5">
+         <!-- Page title -->
+         <h1>Decryption Tool</h1>
+         <!-- Form for file upload with POST method -->
+         <form method="POST" enctype="multipart/form-data">
+            <!-- Input field for encrypted file -->
+            <div class="form-group">
+               <label for="input_file">Encrypted File:</label>
+               <input type="file" name="input_file" class="form-control" required>
+            </div>
+            <!-- Input field for password file -->
+            <div class="form-group">
+               <label for="password_file">Password File:</label>
+               <input type="file" name="password_file" class="form-control" required>
+            </div>
+            <!-- Submit button to start decryption -->
+            <button type="submit" class="btn btn-primary">Start Decryption</button>
+            <!-- Button to show decryption attempts -->
+            <form method="POST" action="/show_attempts" enctype="multipart/form-data">
+              <button type="submit" class="btn btn-secondary">Show Attempts</button>
+           </form>         
+         <hr>
+         <!-- Display flash messages for success or error notifications (Jinja templating) -->
+         {% with messages = get_flashed_messages(with_categories=true) %}
+         {% if messages %}
+         {% for category, message in messages %}
+         <div class="alert alert-{{ category }} mt-2">
+            {{ message }}
+         </div>
+         {% endfor %}
+         {% endif %}
+         {% endwith %}
+         
+         <!-- Conditional display of download link if decryption is successful -->
+         {% if request.args.get('filename') %}
+         <div class="alert alert-success mt-4">
+            <a href="{{ url_for('download_file', filename=request.args.get('filename')) }}">Download Decrypted File</a>
+         </div>
+         {% endif %}
+
+         <!-- JavaScript to handle file input and read file content -->
+         <script>
+            // Variables to reference file input and output elements
+            const fileInput = document.getElementById("fileInput");
+            const fileContent = document.getElementById("fileContent");
+
+            // Event listener for file selection
+            fileInput.addEventListener("change", function(event) {
+              const file = event.target.files[0];
+              if (file) {
+                  const reader = new FileReader();
+                  reader.onload = function(e) {
+                      fileContent.textContent = e.target.result;
+                  };
+                  reader.readAsText(file);  // Reads file as text
+              } else {
+                  fileContent.textContent = "No file selected";
+              }
+            });
+         </script>
+      </div>
+   </body>
+</html>
