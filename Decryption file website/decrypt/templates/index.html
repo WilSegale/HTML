@@ -20,7 +20,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Start Decryption</button>
             <button type="button" onclick="location.reload()" class="btn btn-secondary">Show passwords</button>
-            <button type="button" onclick="saveTextToFile()" class="btn btn-secondary">Save to File</button>
          </form>
 
          <hr>
@@ -34,17 +33,6 @@
             {% endfor %}
          {% endif %}
          {% endwith %}
-
-         <script>
-            function saveTextToFile() {
-               const text = "Decryption attempts: {{ attempt_count }}";  // Replace with dynamic text as needed
-               const blob = new Blob([text], { type: 'text/plain' });
-               const link = document.createElement("a");
-               link.href = URL.createObjectURL(blob);
-               link.download = "decryption_log.txt";
-               link.click();
-            }
-         </script>
       </div>
    </body>
 </html>
