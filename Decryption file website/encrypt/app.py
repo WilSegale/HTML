@@ -8,7 +8,10 @@ app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Replace with a secure secret key
 
 UPLOAD_FOLDER = "uploads"
-ENCRYPTED_FOLDER = "encrypted_files"
+
+# Set the ENCRYPTED_FOLDER to the user's desktop path
+DESKTOP_FOLDER = os.path.join(os.path.expanduser("~"), "Desktop")
+ENCRYPTED_FOLDER = os.path.join(DESKTOP_FOLDER, "encrypted_files")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(ENCRYPTED_FOLDER, exist_ok=True)
 
@@ -54,7 +57,7 @@ def home():
 
         # Encrypt the file
         if encrypt_file(input_file_path, encrypted_file_path, password):
-            flash("File encrypted successfully!", "success")
+            flash("File encrypted successfully! The file has been saved to your Desktop.", "success")
             os.remove(input_file_path)  # Optionally remove the original file after encryption
             return redirect(url_for("download_file", filename=encrypted_filename))
         else:
