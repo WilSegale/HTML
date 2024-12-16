@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Decryption Tool</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   </head>
-   <body>
-      <div class="container mt-5">
-         <h1>Decryption Tool</h1>
-         <form method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-               <label for="input_file">Encrypted File:</label>
-               <input type="file" id="input_file" name="input_file" class="form-control" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decryption Tool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-header text-white text-center" style="background-color: #007bff;">
+                <h1>Decryption Tool</h1>
             </div>
-            <div class="form-group">
-               <label for="password_file">Password File:</label>
-               <input type="file" id="password_file" name="password_file" class="form-control" required>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="input_file">Encrypted File:</label>
+                        <input type="file" id="input_file" name="input_file" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_file">Password File:</label>
+                        <input type="file" id="password_file" name="password_file" class="form-control" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-lg">Start Decryption</button>
+                        <button type="button" onclick="location.reload()" class="btn btn-secondary btn-lg">Reset</button>
+                    </div>
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary">Start Decryption</button>
-            <button type="button" onclick="location.reload()" class="btn btn-secondary">Show passwords</button>
-         </form>
+        </div>
 
-         <hr>
+        <hr>
 
-         {% with messages = get_flashed_messages(with_categories=true) %}
-         {% if messages %}
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
             {% for category, message in messages %}
-               <div class="alert alert-{{ category }} mt-2">
-                  {{ message }}
-               </div>
+                <div class="alert alert-{{ category }} mt-3">
+                    {{ message }}
+                </div>
             {% endfor %}
-         {% endif %}
-         {% endwith %}
-      </div>
-   </body>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
 </html>

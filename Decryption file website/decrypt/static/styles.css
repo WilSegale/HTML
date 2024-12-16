@@ -1,0 +1,46 @@
+body {
+    background-color: #f8f9fa; /* Light gray background for the entire page */
+    color: #333; /* Dark text for readability */
+    font-family: "Arial", sans-serif; /* Clean and modern font */
+}
+
+.card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+}
+
+.card-header {
+    background-color: #007bff; /* Blue header */
+    color: white; /* White text for contrast */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-success {
+    background-color: #28a745; /* Green button */
+    border-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34;
+}
+
+.alert {
+    border-radius: 4px; /* Rounded corners for alerts */
+}
+
+.alert-success {
+    background-color: #d4edda; /* Light green for success */
+    color: #155724; /* Dark green text */
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Light red for errors */
+    color: #721c24; /* Dark red text */
+}
+

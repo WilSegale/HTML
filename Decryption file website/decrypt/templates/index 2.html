@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decryption Tool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Decryption Tool</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="input_file">Encrypted File:</label>
+                <input type="file" id="input_file" name="input_file" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password_file">Password File:</label>
+                <input type="file" id="password_file" name="password_file" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Start Decryption</button>
+            <button type="button" onclick="location.reload()" class="btn btn-secondary">Reset</button>
+        </form>
+
+        <hr>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} mt-2">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
