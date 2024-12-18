@@ -23,7 +23,7 @@ var Answer = [
 
 // Ensure the DOM is loaded before accessing elements
 document.addEventListener("DOMContentLoaded", function() {
-    var Input = document.getElementById("input"); // User input
+    var userInput = document.getElementById("userInput"); // User input
     var Output = document.getElementById('output'); // Output element
 
     function info() {
@@ -35,25 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
         var outputIndex = Math.floor(Math.random() * Answer.length); // Randomly choose something from the Answers array
 
         // If the user inputs "help"
-        if (Input.value.trim().toLowerCase() === "help") {
+        if (userInput.value.trim().toLowerCase() === "help") {
             Output.innerText = 'Input something in the input field and it will output an answer.';
         }
         // Check if the input is a number
-        else if (!isNaN(Input.value) && Input.value.trim() !== "") {
+        else if (!isNaN(userInput.value) && userInput.value.trim() !== "") {
             Output.innerText = "Click the magic 8Ball to see the result.";
         }
         // Output an answer to the user's input
         else {
             Output.innerText = Answer[outputIndex]; // Output the answer
         }
-        Input.value = ""; // Clear the user input
+        userInput.value = ""; // Clear the user input
     }
 
     // You might want to set this function to run when the page loads
     info();
     
     // Add an event listener if you want to trigger output on Enter key press
-    Input.addEventListener("keypress", function(event) {
+    userInput.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             output();
         }
