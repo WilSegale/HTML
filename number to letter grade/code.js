@@ -16,7 +16,7 @@ var getIPAddress = function(){
       $('#countdown').fadeOut("slow");
     }
     else{
-      document.getElementById("countdown").innerHTML = "You will not be able to see your IP address in " + timeleft + "S";
+      document.getElementById("countdown").innerHTML = `You will not be able to see your IP address in ${timeleft}S`;
     }
     timeleft -= 1;
   },1000);
@@ -224,7 +224,7 @@ function grades() {
 			document.getElementById("box").style.background = "white";
 			document.getElementById("seventhNum").style.cursor = 'auto';
 			document.getElementById("body").style.cursor = 'auto';
-			document.getElementById("answer").innerHTML =num5;
+			document.getElementById("answer").innerHTML = num5;
 			//document.getElementById("answer").innerHTML = name + " You Got an " + grade5 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 			//document.getElementById("answer").innerHTML = prompt("What is your name?") + " You Got an " + grade5 + " in " + prompt("Please put your subject in.") + " Try a little harder on the next assignment.";
 		}
