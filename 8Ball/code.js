@@ -22,7 +22,7 @@ var Answer = [
 ];
 
 // Ensure the DOM is loaded before accessing elements
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function()) {
     var userInput = document.getElementById("userInput"); // User input
     var Output = document.getElementById('output'); // Output element
 
